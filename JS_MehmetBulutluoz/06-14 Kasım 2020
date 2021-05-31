@@ -1,0 +1,453 @@
+06-14 Kasım 2020
+
+/*
+SORU : Kullanicidan boyunu cm olarak, kilosunu kilogram olarak alin ve vucut kutle endeksini bulun. VKE’ni ondalikli sayi olarak yazdirin ve kullanicinin durumunu belirleyin.
+VKE= kilo/(boy*boy)   …….. Kilo : kilogram , Boy : metre olmalidir
+VKE<20 ise kullanici zayif
+20<VKE<25 ise kullanici saglikli
+25<VKE<30 ise kullanici sisman
+30<VKE       ise kullanici obez 
+*/
+var kilo=prompt("lutfen kilonuzu giriniz");
+var boy=prompt("Lutfen boyunuzu cm olarak giriniz");
+var vke=(kilo*10000/(boy*boy)).toFixed(1);
+console.log(vke);
+if(vke>30){
+    alert("Vucut kutle endeksiniz : " + vke + " Maalesef obezsiniz");
+} else if (vke>25){
+    alert("Vucut kutle endeksiniz : " + vke + " Maalesef sismansiniz");
+} else if(vke>20){
+     alert("Vucut kutle endeksiniz : " + vke + " Tebrikler cok sagliklisiniz");
+} else {
+     alert("Vucut kutle endeksiniz : " + vke + " Siz de cok zayifsiniz");
+}
+
+--------------------------------------------------------------------------------------------------
+
+/*
+SORU : Kullanicidan boyunu cm olarak, kilosunu kilogram olarak alin ve vucut kutle endeksini bulun. VKE’ni ondalikli sayi olarak yazdirin ve kullanicinin durumunu belirleyin.
+VKE= kilo/(boy*boy)   …….. Kilo : kilogram , Boy : metre olmalidir
+VKE<20 ise kullanici zayif
+20<VKE<25 ise kullanici saglikli
+25<VKE<30 ise kullanici sisman
+30<VKE       ise kullanici obez 
+*/
+vkeBul();
+degerlendirme();
+function vkeBul(){
+    var kilo=prompt("lutfen kilonuzu giriniz");
+    var boy=prompt("Lutfen boyunuzu cm olarak giriniz");
+    var vke=(kilo*10000/(boy*boy)).toFixed(1);
+   return vke;
+}
+function degerlendirme(){
+    if(vke>30){
+    alert("Vucut kutle endeksiniz : " + vke + " Maalesef obezsiniz");
+} else if (vke>25){
+    alert("Vucut kutle endeksiniz : " + vke + " Maalesef sismansiniz");
+} else if(vke>20){
+     alert("Vucut kutle endeksiniz : " + vke + " Tebrikler cok sagliklisiniz");
+} else {
+     alert("Vucut kutle endeksiniz : " + vke + " Siz de cok zayifsiniz");
+}
+}
+
+-------------------------------------------------------------------------------------------
+
+/*
+SORU : Kullanicidan boyunu cm olarak, kilosunu kilogram olarak alin ve vucut kutle endeksini bulun. VKE’ni ondalikli sayi olarak yazdirin ve kullanicinin durumunu belirleyin.
+VKE= kilo/(boy*boy)   …….. Kilo : kilogram , Boy : metre olmalidir
+VKE<20 ise kullanici zayif
+20<VKE<25 ise kullanici saglikli
+25<VKE<30 ise kullanici sisman
+30<VKE       ise kullanici obez 
+*/
+vkeBul();
+alert(degerlendirme());
+function vkeBul(){
+    var kilo=prompt("lutfen kilonuzu giriniz");
+    var boy=prompt("Lutfen boyunuzu cm olarak giriniz");
+    var vke=(kilo*10000/(boy*boy)).toFixed(1);
+   return vke;
+}
+function degerlendirme(){
+    if(vke>30){
+    var sonuc= "Vucut kutle endeksiniz : " + vke + " Maalesef obezsiniz";
+    return sonuc;
+} else if (vke>25){
+    sonuc = "Vucut kutle endeksiniz : " + vke + " Maalesef sismansiniz";
+    return sonuc;
+} else if(vke>20){
+     sonuc = "Vucut kutle endeksiniz : " + vke + " Tebrikler cok sagliklisiniz";
+     return sonuc;
+} else {
+     sonuc="Vucut kutle endeksiniz : " + vke + " Siz de cok zayifsiniz";
+     return sonuc;
+}
+}
+
+-------------------------------------------------------------------------------------------------
+
+/*
+SORU : Final notu, vize notu ve proje notu girilen ogrencinin yilsonu notunu hesaplayin. 
+(Vize %30, Proje %20, Final %50)  ve yilsonu notu 
+85 den buyukse AA ile gectin
+65-85 arasi ise BB ile gectin
+50-65 arasi ise CC ile gectin
+50 den dusukse maalesef kaldin yazdirin
+*/
+alert(notuHesapla(yilSonu(60,20,60)));
+function yilSonu(vize,proje,final){
+   var yilSonuOrtalamasi = (vize*0.30 + proje*0.20 + final*0.50);
+   return (yilSonuOrtalamasi);
+}
+function notuHesapla(not){
+    if(not>85){
+        return ("AA ile gectiniz");
+    } else if (not>65) {
+        return ("BB ile gectin");
+       
+    } else if (not>50){
+       return("CC ile gectin");
+    } else {
+        return ("maalesef kaldin");
+    }
+    
+}
+
+--------------------------------------------------------------------------------------------
+
+var sayi=4;
+// eger sayi 1 ise merhaba yazsin
+// sayi 2 ise hoscakal
+// sayi 3 ise elvada
+// sayi 4 ise yeniden geldim yazsin
+// = atama isaretidir, bir degiskene(variable) deger atar
+sayi=2;
+sayi=3;
+if(sayi==1){
+   alert("merhaba");
+} else if (sayi==2){
+    alert("hoscakal");
+} else if(sayi==3){
+    alert("elveda");
+} else {
+    alert("yeniden geldim");
+}
+
+------------------------------------------------------------------------------------------------
+
+var sayi=1;
+var sayiStr="1";
+console.log(sayiStr);
+// == data tipine bakmadan datalarin esit olup olmadigina bakar
+// === hem degerin, hem de data tipinin ayni olmasini ister
+if(sayi==sayiStr){
+    console.log("== calisti");
+} else if (sayi===sayiStr){
+    console.log("=== calisti");
+} else console.log("hicbiri calismadi");
+
+-------------------------------------------------------------------------------------------------
+
+// kullaniciya bir sayi sorun
+// sayi 25 ise bildin deyin
+// 25 degilse bilemedin
+// == dedigimizde data tiplerine bakmadan degerlerin esitligine bakar 25=="25"
+// === dedigimizde hem data tiplerine hem de degerlerine bakar
+var tahmin=parseInt(prompt("bir sayi tuttum bakalim bilebilecek misin ?"));
+if (tahmin===25){
+    alert (" iyi tahmin, sayiyi bildin");
+} else {
+    alert("bilemedin, bir daha dene");
+}
+// parseInt() parantez icine yazilan degeri sayiya cevirir.
+
+--------------------------------------------------------------------------------------------------
+
+/*
+SORU : Kullanicidan iki tamsayi sayi ve islem cinsini alin ve 
+sayilari kullanicinin belirledigi isleme tabii tutup sonucu yazdirin.
+1 toplama
+2 cikarma
+3 carpma
+4 bolme
+50, 10 4 == >50'yi 10 bolunce sonuc 5 olur
+*/
+var sayi1= parseInt(prompt("1.sayıyı giriniz."));
+var sayi2=parseInt(prompt("2.sayıyı giriniz."));
+var islem=prompt("Yapmak istediğiniz işlemi giriniz \n1-Toplama \n2- Çıkarma \n3- Çarpma \n4-Bölme ");
+var sonuc=0;
+if (islem==1){
+    sonuc=sayi1+sayi2;
+    alert("İşlemin Sonucu= " + sonuc);
+} else if(islem==2){
+    sonuc=sayi1-sayi2;
+    alert("İşlemin Sonucu= " + sonuc);
+}else if(islem==3){
+    sonuc=sayi1*sayi2;
+    alert("İşlemin Sonucu= " + sonuc);
+}else if(islem==4){
+    sonuc=sayi1/sayi2;
+    alert("İşlemin Sonucu= " + sonuc);
+}else {alert("Geçerli bir rakam giriniz")}
+
+--------------------------------------------------------------------------------------------------
+
+/*
+SORU : Kullanicidan iki tamsayi sayi ve islem cinsini alin ve 
+sayilari kullanicinin belirledigi isleme tabii tutup sonucu yazdirin.
+1 toplama
+2 cikarma
+3 carpma
+4 bolme
+50, 10 4 == >50'yi 10 bolunce sonuc 5 olur
+*/
+var sayi1= parseInt(prompt("1.sayıyı giriniz."));
+var sayi2=parseInt(prompt("2.sayıyı giriniz."));
+var islem=prompt("Yapmak istediğiniz işlemi giriniz \n1-Toplama \n2- Çıkarma \n3- Çarpma \n4-Bölme ");
+if(islem>0 && islem<5){
+    alert("girdiginiz islemin sonucu " + islemYap(sayi1,sayi2,islem));
+} else {
+    alert("Lutfen gecerli islem no yaziniz");
+}
+function islemYap(ilk,ikinci,islemNo){
+if (islemNo==1){
+   return (ilk+ikinci);
+    
+} else if(islemNo==2){
+    
+  return (ilk-ikinci);
+}else if(islemNo==3){
+    return (ilk*ikinci);
+}else if(islem==4){
+   
+    return (ilk/ikinci);
+}
+}
+
+----------------------------------------------------------------------------------------------------
+
+/*
+SORU : Kullanicidan aldigi urunun adedini ve liste fiyatini alin, 
+kullaniciya musteri karti olup olmadigini sorun 
+    * Musteri karti varsa 10 urunden fazla alirsa %20, yoksa %15 indirim yapin
+    * Musteri karti yoksa 10 urunden fazla alirsa %15, yoksa %10 indirim yapin
+*/
+var adet=prompt("Lutfen aldiginiz urun adedini giriniz");
+var listeFiyat=prompt("Lutfen urunun liste fiyatini giriniz");
+var kartVarmi=prompt("Musteri kartiniz var mi ? \n1-EVET \n2-HAYIR");
+if(kartVarmi==1 && adet>10){
+    alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.80);
+} else if(kartVarmi==1 && adet<=10){
+     alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.85);
+} else if(kartVarmi==2 && adet>10){
+     alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.85);
+} else {
+     alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.90);
+}
+
+----------------------------------------------------------------------------------------------------
+
+/*
+SORU : Kullanicidan aldigi urunun adedini ve liste fiyatini alin, 
+kullaniciya musteri karti olup olmadigini sorun 
+    * Musteri karti varsa 10 urunden fazla alirsa %20, yoksa %15 indirim yapin
+    * Musteri karti yoksa 10 urunden fazla alirsa %15, yoksa %10 indirim yapin
+*/
+var adet=prompt("Lutfen aldiginiz urun adedini giriniz");
+var listeFiyat=prompt("Lutfen urunun liste fiyatini giriniz");
+var kartVarmi=prompt("Musteri kartiniz var mi ? \n1-EVET \n2-HAYIR");
+if(kartVarmi==1){           // kart var
+        
+        if(adet>10){
+            alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.80);
+        } else {
+            alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.85);
+        }
+} else {                    // kart yok
+        if(adet>10){
+            alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.85); 
+        }else {
+            alert("aldiginiz urunlerin indirimli fiyati : " + adet*listeFiyat*0.90);
+        }
+}
+
+---------------------------------------------------------------------------------------------
+
+/*
+Soru :  Kullanicidan email girmesini isteyin, 
+@ isareti icermiyorsa “gecerli bir email girin” yazdirin
+@ isaretinden sonra sadece “gmail.com” yaziyorsa “email onaylandi” yazdirin
+@ isaretinden sonra “gmail.com” disinda birsey yaziyorsa 
+     “Lutfen gmail hesabinizi girin” yazdirin
+str.includes("@");
+str.indexOf("");
+mail => mehmet@asdasgmail.comasddff
+*/
+var email=prompt("Lutfen E-mail hesabınızı giriniz");
+if(email.includes("@")){              // @ isareti var
+        var indexSusluA=email.indexOf("@"); // @ isaretinin indexini buldum
+        var susluASonrasi =email.slice(indexSusluA+1); // @ isaretinden sonrasini kesip aldim
+        if(susluASonrasi=="gmail.com"){
+            alert("email onaylandi");
+        }else {
+            alert("Lutfen gmail hesabinizi girin");
+        }
+} else {                               // @ isareti yok
+       alert("gecerli bir email girin"); 
+}
+
+
+--------------------------------------------------------------------------------------------------
+
+for(var i=100 ; i>=50 ; i-=10){
+    console.log(i);
+}
+// for loop 2 parcadan olusur
+// condition kismi () 
+        // 1) kullanacagimiz var olusturuyoruz,genelde i kullaniriz
+        // 2) hangi sayiya kadar loop'u tekrar calistiracagimiz
+        // 3) degiskeni nasil artiracagimiz/eksiltecegimiz
+// body kismi {}
+/*
+Interview soru : 100’den 1’e kadar olan sayilari yazdiralim
+                            3’un katlari olursa sayi yerine “fizz” yazdirin
+                            5’in katlari olursa sayi yerine “buzz” yazdirin
+                            15’in kati olursa sayi yerine “fizzbuzz” yazdirin 
+*/
+for (var i=100; i>0 ; i--){
+    if(i%15==0){
+        console.log("fizzbuzz");
+       } else if (i%5==0){
+           console.log("buzz");
+       } else if (i%3==0){
+           console.log("fizz");
+       } else {
+           console.log(i);
+       }
+}
+
+
+--------------------------------------------------------------------------------------------------
+
+// Kullanicidan 4 basamakli bir sayi alin ve rakamlari toplamini bulun
+var sayi=parseInt(prompt("4 basamakli bir sayi giriniz"));
+ var rakamToplami=0;
+for(var i=4 ; i>0 ; i--){
+   
+    rakamToplami+=sayi%10;
+    sayi=Math.floor(sayi/10 );
+}
+ console.log("rakamlar toplami : " + rakamToplami);
+
+----------------------------------------------------------------------------------------------------
+
+// Kullanicidan pozitif bir tamsayi sayi alin ve rakamlari toplamini bulun
+var sayi=(prompt("bir sayı giriniz"));
+var basamakSayisi=sayi.length;
+sayi=parseInt(sayi);
+var rakamlarToplami=0;
+for(var i=basamakSayisi ; i>0 ; i--){
+    rakamlarToplami+=sayi%10;
+    sayi=Math.floor(sayi/10);
+}
+ console.log("rakamlar toplami : " + rakamlarToplami);
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+ÖDEV:
+Soru : Kullanicidan 3 harften uzun bir kelime ve 10’dan kucuk bir sayi alin,
+Kelimenin son 2 harfini girilen sayi kadar yazdirin.
+--------------------------------------------------------------------
+
+var kelime =prompt("En az dört harfli bir kelime giriniz..");
+var sayi=prompt("10 dan küçük bir sayi giriniz.");
+
+var yazi=kelime.slice(-2);
+
+for (i=1 ; i<=sayi; i++){
+   console.log(yazi);
+}
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Soru : Kullanicidan bir cumle ve bir harf alin,
+Cumlede harfin kac kere kullanildigini bulup, yazdirin.
+
+--------------------------------------------------------------------
+var cumle=prompt("Bir cümle giriniz");
+var harf=prompt("Bir harf giriniz");
+var harfToplam=0;
+
+for(i=0 ; i<cumle.length; i++){
+    if(cumle[i]==harf){
+        harfToplam++;
+    }
+} alert(harf +" cümlede " +harfToplam+" adet var.");
+-----------------------------------------------------------
+-----------------------------------------------------------
+Soru : Bir sayının mükemmel olup olmadığını bulan bir program yazınız.
+Mükemmel sayı : bir sayının kendisi hariç bölenlerinin toplamı, kendisine eşitse o sayı mükemmeldir.
+----------------------------------------------------------------
+
+
+var sayi=prompt("Bir sayı giriniz");
+var toplam=0;
+for (i=1; i<sayi ; i++){
+    if(sayi%i==0){
+        toplam+=i;
+    }
+} console.log(toplam);
+if (sayi==toplam){alert(sayi+ " MÜKEMMEL sayıdır.")}
+else{alert(sayi+ " Mükemmel sayı değildir.")}
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+Soru : Verilen bir kelimeyi tersine ceviren function yaziniz
+------------------------------------------------------------------
+var kelime=prompt("Bir kelime giriniz.");
+
+var kelimeL=kelime.length;
+var yeniKelime="";
+for(i=kelimeL; i>=0; i--){
+   yeniKelime+=kelime.substring(i-1,i);
+}
+alert(yeniKelime);
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+Soru : Kullanicidan bir yil alin ve girilen yilin ARTIK yil olup olmadigini bulun
+4'e tam bölünen yıllar artık yıldır.
+100'e tam bölünen yıllar artık yıl değildir.
+400'e tam bölünen yıllar artık yıldır.
+--------------------------------------------------------------------
+var yil=prompt("Bir yıl giriniz");
+
+
+if(yil%100==0){
+    if(yil%400==0){alert(yil +" artık yıldır.");}
+    else{alert(yil +" artık yıl değildir.");}
+} else if(yil%4==0){alert(yil +" artık yıldır.");
+}else{alert(yil +" artık yıl değildir.");} 
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+Soru : Kullanicidan email girmesini isteyin,
+@ isareti icermiyorsa “gecerli bir email girin” yazdirin
+@ isaretinden sonra sadece “gmail.com” yaziyorsa “email onaylandi” yazdirin
+@ isaretinden sonra “gmail.com” disinda birsey yaziyorsa
+“Lutfen gmail hesabinizi girin” yazdirin
+str.includes(“”);
+str.indexOf(“”);
+--------------------------------------------------------------------
+Kendi Çözümüm
+-------------
+var mail=prompt("Mail adresinizi giriniz");
+
+if (mail.includes("@")){
+    if ((mail.slice(mail.indexOf("@")+1))=="gmail.com"){
+        alert("E-mail onaylandı");
+    } else {alert("Gmail hesabınızı giriniz.");}
+}else {alert("Geçerli bir mail giriniz.");}
+--------------------------------------------------------------------------------------------------------------------------------------------

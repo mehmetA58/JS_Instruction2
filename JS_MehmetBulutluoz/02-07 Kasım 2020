@@ -1,0 +1,249 @@
+02-07 Kasım 2020
+//1.ders
+// var degisken=10;
+// console.log(typeof(degisken));
+//degisken="Mehmet";
+//console.log(typeof(degisken));
+// degisken=true;
+// console.log(typeof(degisken));
+//var name=prompt("isminizi giriniz");
+//prompt kullanicidan bir veri(data) almak icin kullanilir
+//console.log("Merhaba " + name + " nasilsin ?");
+// sonuc cumlesi belli bir yapida olsun isteniyorsa sabit kisimlar "" icerisinde yazilir
+// dinamik kisimlar ise degisken adi seklinde yazilir
+//Hasan diye birini tanimiyorum. Sen git Mehmet gelsin.
+//console.log("sen git "+ name + ", Mehmet gelsin.");
+// Soru 1: Kullanicidan karenin bir kenarini alin ve karenin alanini hesaplayip console’a yazdirin
+//var kenar=prompt("Karenin bir kenarini giriniz");
+//var kareninAlani=kenar*kenal;
+//console.log("Kenari "+ kenar +" olan karenin alani "+ kareninAlani +" dir");
+// UpperCase =>buyuk harf , LowerCase => kucuk harf 
+//CamelCase mehmetHocaninDersi => ilk kelime haric diger kelimelerin ilk harfleri buyuk, 
+//geriye kalan harfler kucuk
+// Soru 2: Kullanicidan dikdortgenin kenarlarini alin ve 
+//diktortgenin cevresini hesaplayip console’a yazdirin
+// var kisaKenar=prompt("Dikdortgenin kisa kenarini giriniz");
+// var uzunKenar=prompt("Dikdortgenin uzun kenarini giriniz");
+// var cevre=(2* kisaKenar + 2* uzunKenar);
+// console.log("Kenarlari " + kisaKenar +" ve " + uzunKenar + " olan dikdortgenin cevresi : " + cevre);
+//Soru 3: Kullanicidan dairenin yaricapini alin ve dairenin alanini hesaplayip console’a yazdirin
+// var yaricap=prompt("Lutfen cemberin yaricapini giriniz");
+// var daireninAlani=3.14*yaricap*yaricap;
+// alert("yaricapi " + yaricap +" olan dairenin alani : " + daireninAlani);
+//Soru 4: programda var olan iki degeri dik kenar degerleri olarak alip
+//hipotenus uzunlugunu hesaplayip console’a yazdirin
+// hipotenusun karesi = diger iki kenarin kareleri toplami
+var kenar1=3;
+var kenar2=4;
+var hipotenusKaresi=kenar1*kenar1+kenar2*kenar2;
+var hipotenus=Math.sqrt(hipotenusKaresi);
+console.log(hipotenus);
+------------------------------------------------------------------------------------------------------
+//2.ders
+// Soru 6 : Kullanicidan iki tane sayi alin 
+//  “Lutfen a sayisini girin : ”
+//  “Lutfen b sayisini girin : ”
+//  Girilen sayilari 3.bir variable yardimiyla 
+//  egistirin ve alert ile kullaniciya degismis halini gosterin 
+// var a= prompt("Lutfen A sayisini giriniz");
+// var b= prompt("Lutfen B sayisini giriniz");
+// var c=a;
+// a=b;
+// b=c;
+// alert("girdiginiz sayilari degistirdim. Artik A=" + a + ", B= " + b);
+    
+// console.log("merhaba" + "arkadaslar");
+// console.log("merhaba " + "arkadaslar");
+// console.log("merhaba" + " arkadaslar");
+// console.log("merhaba" +" "+ "arkadaslar");
+var isim="Mehmet";
+var mesaj="Iyi gunler";
+// iyi gunler Mehmet bey !
+// static (degismeyen) ifadeleri " " icine yaziyoruz
+// dinamik (degisen) ifadelerin yerine variable adini yaziyoruz
+console.log(mesaj+ " " + isim + " Bey!");
+// Mehmet bey hosgeldiniz, iyi gunler!
+console.log(isim+" bey hosgeldiniz, " + mesaj +"!");
+// Soru : Isminiz, soyisminiz ve yasiniz icin birer variable olusturun
+//  sonucu “Benim ismim Mehmet Bulutluoz ve 48 yasindayim.” seklinde alert ile  
+// ekrana yansitin.
+// var isim="Mehmet";
+// var soyisim="Bulutluoz";
+// var yas=48;
+// alert("Benim ismim "+isim+" "+soyisim+" ve "+ yas+" yasindayim");
+// Soru : Kullaniciya adini,soyadini ve yasini ayri ayri sorun.
+//  Kullanicinin girdigi degerleri variable’lara atayin
+//  Ve sonucu “Isminiz Mehmet Bulutluoz ve 48 yasindasiniz.” seklinde alert                                     olarak yazdirin
+// var isim=prompt("Isminizi giriniz");
+// var soyisim=prompt("Soyisminizi giriniz");
+// var yas=prompt("Yasinizi giriniz");
+// alert("Isminiz "+isim+" "+soyisim+" ve "+ yas+" yasindasiniz");
+console.log(20+20+"Mehmet"); // 40Mehmet
+console.log("Mehmet"+20+20); // Mehmet2020
+console.log(20+"Hasan"+25);
+console.log("Mehmet"+(20+20)); // Mehmet40
+
+---------------------------------------------------------------------
+//3.ders
+// var mesaj ="Cekoslavakyalilastiramadiklarimizdan misiniz ? ";
+// console.log(mesaj.length);
+// string.length : string'in kac karkterden olustugunu verir
+// Soru : Mini tweeter programi yapalim.
+//  Prompt ile kullaniciya  “Tweetinizi yaziniz” mesaji ile tweet metnini alalim
+//  Girilen metni bir string degiskene atayalim
+//  kullanicinin yazdigi metindeki karakter sayisini bulup kullaniciya alert ile                                    su sekilde mesaj verelim.
+// “120 karakter girdiniz ve 120 karakter daha girebilirsiniz”
+// var mesaj=prompt("Lutfen tweetinizi yaziniz");
+// alert(mesaj.length + " karakter girdiniz ve "+ (240-mesaj.length) + " karakter daha girebilirsiniz");
+// kullanicidan 2 cumle alalim ve cumlelerin uzunluklarini hesaplayip
+// "1.cumle 2. cumleden + 13 +  karakter daha uzun" seklinde bir sonuc yazdiralim
+// var cumle1= prompt("birinci cümleyi giriniz");
+// var cumle2= prompt("ikinci cümleyi giriniz");
+// var cumle1Uzunluk=cumle1.length;
+// var cumle2Uzunluk=cumle2.length;
+// var fark= cumle1Uzunluk-cumle2Uzunluk;
+// alert("birinci cümle ikinci cümleden " + fark + " karakter uzundur");
+// var isim = "Mehmet"; // index: her bir harfin konumunu ifade eder, sifirdan baslar
+// M'nin indexi 0, t'nin indexi : 5
+// console.log(isim.slice(3)); // index'i 3 olan harf ve sonrasini verir met 
+// console.log(isim.slice(5)); // index'i 5 olan harf ve sonrasini verir t 
+// console.log("8.index ve sonrasi : "+isim.slice(8)); // index'i 8 olan harf olmadigindan bosluk verir
+// console.log(isim.slice(2,4)); // hm index'i 2 olan h den baslar, index'i 4 olan harften once durur
+// console.log(isim.slice(1,5)); // ehme index'i 1 olan e'den baslar, index'i 5 olan t'den once durur
+// string.slice(a,b) index a dahil(inclusive), index b haric(exclusive) olarak aradaki metin parcasini verir
+// var isim="Abdurrahman";
+// Abdur yazdirin
+// console.log(isim.slice(0,5));
+// rahman yazdirin
+// console.log(isim.slice(5,11));
+// console.log(isim.slice(5));
+// Soru : Mini tweeter programi yapalim.
+//  Prompt ile kullaniciya  “Tweetinizi yaziniz” mesaji ile tweet metnini alalim
+//  Girilen metni bir string degiskene atayalim
+//  kullanicinin yazdigi metindeki karakter sayisini bulup,ilk 140 karakterden                                  sonrasini keselim ve    kullaniciya alert ile su sekilde bilgi verelim 
+//  “140 karakteri gectigi icin mesajinizdan “dfgdfhh” kismi kesildi”
+// var tweet=prompt("Lutfen tweetinizi yaziniz");
+// var tweetIlk140=tweet.slice(0,140);
+// var tweet140danSonra=tweet.slice(140);
+// //console.log("ilk 140 " + tweetIlk140);
+// //console.log("ilk 140 den sonrasi " +  tweet140danSonra);
+// console.log("140 karakteri gectigi icin mesajinizdan ("+ tweet140danSonra +")kismi kesildi");
+// Kullacidan ismini ve soyismini isteyin
+// ilk 20 karakteri kullanici adi olarak tanimlayin
+// ve alert ile "Kullanici adiniz ........ olarak tanimlanmistir." yazdirin
+// var isimSoyisim=prompt("Isminizi ve soyisminizi giriniz");
+// var kullaniciAdi=isimSoyisim.slice(0,20);
+// alert("Kullanici adiniz (" + kullaniciAdi+") olarak tanimlanmistir.");
+// var isimSoyisim=prompt("Isminizi ve soyisminizi giriniz");
+// alert("Kullanici adiniz (" + isimSoyisim.slice(0,20)+") olarak tanimlanmistir.");
+
+---------------------------------------------------------------------------------------------------
+
+
+//4.ders
+// var isim = "Mehmet kececizade";
+// kececizade kismini yazdirin
+// console.log(isim.substring(7));
+//kece yazdirin
+// console.log(isim.substring(7,11));
+// console.log(isim.substring(11,7));
+// console.log(isim.slice(11,7));
+// Soru :   Prompt ile kullaniciya  “bir cumle giriniz” mesaji ile kullanicidan metnini alalim
+//  Girilen metni bir string degiskene atayalim
+//  Kullanicidan prompt ile 2 sayi alalim ve cumlenin ilk girilen sayidan 2.girilen                             sayiya kadar olan kismini alert ile kullaniciya su sekilde verelim.
+// Girdiginiz cumlenin (ilk sayi).karakteri ile (2.sayi).karakteri arasindaki kisim :........
+// Merhaba arkadaslar, nasilsiniz ?  6 - 12 ==> a ark  
+// var cumle=prompt("Lutfen bi cumle giriniz");
+// var sayi1=prompt("stringi baslatmak istediginiz index'i giriniz");
+// var sayi2=prompt("stringi bitirmek istediginiz index'i giriniz");
+// console.log("Girdiginiz cumlenin " + sayi1 + ".karakteri ile" + sayi2 + ".karakteri arasindaki kisim :" + cumle.slice(sayi1,sayi2));
+// console.log("Girdiginiz cumlenin " + sayi1 + ".karakteri ile" + sayi2 + ".karakteri arasindaki kisim :" + cumle.substring(sayi1,sayi2));
+// kullanicidan ismini alin ve tamami buyuk harf olarak yazdirin
+// var isim=prompt("lutfen isminizi giriniz");
+// console.log(isim.toUpperCase());
+// kullanicidan isim alip tamamini kucuk harf yapin
+// var isim=prompt("lutfen isminizi giriniz");
+// console.log(isim.toLowerCase());
+// size verilen ismi buyuk harf olarak yazdirin
+// var isim="Mehmet Kececi";
+// console.log("isim : " + isim.toUpperCase());
+// console.log(isim);
+// bir yazdirma isleminin icinde yapilan degisiklik gecici degisikliktir
+// degisikligin kalici olmasini istiyorsaniz atama yapmalisiniz
+var isim="Mehmet Kececi";
+isim = isim.toUpperCase(); // bu atama ismi kalici olarak buyuk harf yapar
+console.log(isim);
+console.log(isim.toLowerCase()); // buradaki degisiklik console.log()'un icinde oldugundan gecici olur'
+console.log(isim);
+-----------------------------------------------------------------------------------------------
+ÖZET
+// ders tekrari ve odevler
+// variable
+// var string,number,boolean
+// java script data tipleri konusunda esnektir
+// daha once string olan bir degiskene ihtiyacimiz olursa sayi veya boolean degeri de atayabiliriz
+// kullanicidan veya programdan alinan degerler variable adi ile yazilirken, sabit kisimlar "" icerisinde yaziliyordu
+// prompt("mesaj"); kullaniciya mesaj yazili bir alert acar ve alert'in icinde kullanicinin veri girebilecegi bir text area olursa
+// **** ariable isim verme kurallari ***
+// isimler camelCase olmali, isim birden fazla kelimeden olusuyorsa sonraki kelimelerin ilk harfleri buyuk yapiliyor
+// ismler anlamli olmali, sonraki kodu inceleyenler tarafindan anlasilabilmeli
+// isimlerde harf,sayi,$,_ kullanilabilir , bunlar disinda karakter kullanilamaz
+// keyword isimleri kullanilamaz
+// sayi kullanilabilir ama basa gelemez
+// isimlerde bosluk birakilmaz
+// CONCATINATION == BIRLESTIRME
+// islem sirasi onemli
+// + isaretinin iki tarafi da sayi ise toplama yapiyor
+// + isaretinin bir tarafi bile string olsa concatination olur  
+// eger matematiksel bir islemimiz varsa emin olmak icin bu islemi parantez icine yazmaliyiz
+// string.length; string'in uzunlugunu verir
+// string.slice(5); index'i 5 olan karakterden sona kadar stringi bize verir
+// string.slice(5,10); index'i 5 olan karakter dahil, 10 olan karakter dahil degil 
+// *** indexler 0 DAN BASLAR
+// string.substring(5), string.substring(5,10) slice ile ayni sonuclari verir
+// substring ile slice arasindaki fark aralik verilirken baslama degeri, bitis degerinden buyukse
+// -- slice "" bosluk verirken substring araligi normal yazilmis gibi verir
+// toFixed(2) ondalikli bir sayida virgulden sonraski sayilari 2'ye sabitler
+// string.toUpperCase(); string'i buyuk harfe cevirir
+// string.toLowercase(); string'i kucuk harfe cevirir
+// eger bir yazdirma islemi icerisinde variable'i degistiriyorsak bu gecici bir degisiklik olur
+// variable'i kalici olarak degistirmek istiyorsak ATAMA yapmamiz gerekir.
+//gorev 1-  Kullanicidan ismini ve soysismini alin ve isim ve soyismin ilk harfleri buyuk, digerleri kucuk olarak yazdirin
+//gorev 2- kullanicidan ismini ve kredi karti numarasini alin. isminin ilk ve su formatta yazdirin
+//-- isim: M***** KK nosu: **** **** **** 4045  
+
+--------------------------------------------------------------------------------------------------
+Görev-1
+var isim=prompt("İsminizi giriniz");
+var soyIsim=prompt("Soy isminizi giriniz");
+var isimIlk=isim.substring(0,1).toUpperCase();
+var soyIlk=soyIsim.substring(0,1).toUpperCase();
+console.log(isimIlk+isim.slice(1).toLowerCase()+ " "+soyIlk+soyIsim.slice(1).toLowerCase());
+
+
+--------------------------------------------------------------------------------------------------
+Görev-2
+var isim=prompt("İsminizi giriniz");
+var cardNo=prompt("Kredi Kartı Numaranızı giriniz");
+var isimIlk=isim.substring(0,1).toUpperCase();
+var cardSonDort=cardNo.slice(cardNo.length-4);
+var newIsim=isim.slice(1).replace(/[a-z]/gi,"*");
+var cardNew=cardNo.substring(0,cardNo.length-4).replace(/[0-9]/g,"*");
+console.log("İsminiz=" + isimIlk+newIsim);
+console.log("Kart Numaranız=" +cardNew+cardSonDort);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,151 @@
+05-13 Kasım 2020
+
+/*
+soru 1- Kullaniciya gunde kac cay ictigini ve kac seker kullandigini sorun. 
+Bir yilda ve 40 yilda kac kg seker kullandigini hesaplayip yazdiran fonksiyon yazin
+1 seker = 1.7 gr
+*/
+// 1.yontem
+// hepsini fonksiyon icinde yapalim
+// var kacCay=prompt("Gunde kac cay iciyorsunuz?");
+// var kacSeker=prompt("her caya kac seker atiyorsunuz?");
+// var yildaSeker=(365*kacCay*kacSeker*1.7/1000).toFixed(1);
+// console.log("Yilda " + yildaSeker + " kg seker tuketiyorsunuz");
+// console.log("40 Yilda " + yildaSeker*40 + " kg seker tuketiyorsunuz");
+// 1-fonksiyonda ne islem yapacagim
+// 2-fonksiyona deger gonderecek miyim ?
+// 3- fonksiyondan bir deger alacak miyim ?
+// yillikSekerHesabi();
+// function yillikSekerHesabi(){
+// var kacCay=prompt("Gunde kac cay iciyorsunuz?");
+// var kacSeker=prompt("her caya kac seker atiyorsunuz?");
+// var yildaSeker=(365*kacCay*kacSeker*1.7/1000).toFixed(1);
+// console.log("Yilda " + yildaSeker + " kg seker tuketiyorsunuz");
+// }
+// 2.yontem 
+// once kullanicidan degerleri alalim, fonksiyon sadece hesap yapip yazdirsin
+// var kacCay=prompt("Gunde kac cay iciyorsunuz?");
+// var kacSeker=prompt("her caya kac seker atiyorsunuz?");
+// yildaSekerParametreli(kacCay,kacSeker);
+// function yildaSekerParametreli(cay,seker){
+//     var yillikSekerTuketimi= (365*cay*seker*1.7/1000).toFixed(1);
+//     console.log(yillikSekerTuketimi);
+// }
+// fonksiyonu cagirirken uymamiz gereken temel kurallar
+// 1- fonksiyon ismi ayni olmali
+// 2- parametre sayisi ayni olmali
+// 3- parametrelerin data tipi fonksiyondaki parametrelerin data tipi ile ayni olmali
+// 3.yontem 
+// fonksiyondan once kullanicidan degerleri alirim, fonksiyonda sadece degeri hesaplarim
+// sonucu geri dondururum ve sonucu kullanirim
+var kacCay=prompt("Gunde kac cay iciyorsunuz?");
+var kacSeker=prompt("her caya kac seker atiyorsunuz?");
+var kirkYil= 40* yildaSekerParametreli(kacCay,kacSeker);
+console.log(kirkYil);
+function yildaSekerParametreli(cay,seker){
+    var yillikSekerTuketimi= (365*cay*seker*1.7/1000).toFixed(1);
+   return yillikSekerTuketimi;
+}
+
+--------------------------------------------------------------------------------------------
+
+/*
+soru 2- verilen 4 basamakli sayinin basamaklarini ve basamaktaki sayi degerini 
+yazdiran fonksiyon yazin
+1234
+birler basamagi : 4
+onlar basamagi : 3 .. Gibi
+*/
+// 1.tur fonksiyon, tum islemleri fonksiyonun icinde yapalim
+// basamaklariBul();
+// function basamaklariBul(){
+// var sayi=prompt("Lutfen 4 basamakli bir sayi giriniz");
+// var birler=sayi%10;
+// console.log("birler " + birler);
+// var sayi2=Math.floor(sayi/10);
+// console.log("onlar " + sayi2%10);
+// sayi2=Math.floor(sayi2/10);
+// console.log("yuzler " + sayi2%10);
+// sayi2=Math.floor(sayi2/10);
+// console.log("binler " + sayi2);
+//}
+// 2.tip fonksiyon once kullanicidan deger alalim
+// degeri parametre olarak fonksiyone gonderelim
+var sayiYeni=prompt("Lutfen 4 basamakli bir sayi giriniz");
+basamaklariBul(sayiYeni);
+function basamaklariBul(sayi){
+var birler=sayi%10;
+console.log("birler " + birler);
+var sayi2=Math.floor(sayi/10);
+console.log("onlar " + sayi2%10);
+sayi2=Math.floor(sayi2/10);
+console.log("yuzler " + sayi2%10);
+sayi2=Math.floor(sayi2/10);
+console.log("binler " + sayi2);
+}
+
+--------------------------------------------------------------------------------------------
+
+/*
+soru 3 - verilen 2 sayidan birinciyi sayi ikinciyi us olarak kabul edip sonucu bulan 
+function yazdirin  Math.pow(sayi1,sayi2);
+sayi1=2
+sayis2=3
+sonuc=8
+*/
+// 2.tipte yapalim
+// var sayi1=prompt("Lutfen 10'dan kucuk bir tamsayi yaziniz");
+// var sayi2=prompt("us yapmak icin Lutfen 10'dan kucuk bir tamsayi daha yaziniz");
+// usAlma(sayi1,sayi2);
+// function usAlma(a,b){
+//     var sonuc=Math.pow(a,b);
+//     console.log("sonuc : " + sonuc);
+// }
+// 3.tipte yapalim
+// degerleri de kullanicidan almayalim ve biz olusturalim
+ 
+ var us= function usAlma (sayi1,sayi2){return Math.pow(sayi1,sayi2)}
+ var benimSayim = us(2,3)+ us(4,2);
+ console.log(benimSayim);
+
+ ----------------------------------------------------------------------------------------------
+
+ // var sayi= Math.random();
+// console.log(sayi);
+// random sayi 0 --- 1  
+// 5 * random sayi 0 ---- 5
+// 100*random   0 ---- 100 
+// 1 ile 5 arasinda 4 * random + 1
+// function getRandomInt(sayi) {  return Math.floor(Math.random() * (sayi));}
+// var sayi = getRandomInt(100); 
+// console.log(sayi);
+/*  
+Soru : 2021 de mutlu olacak miyim ? Oyunu yapalim. Kullaniciya adini sorun,
+            0-100 arasi bir sayi uretin
+              - sayi 80’den buyukse “yasasin (isim) 2021 de cooooook mutlu olacaksin”
+              - sayi 60-80 arasi ise “(isim) 2021 de mutlu olacaksin”
+              - sayi 30-60 arasi ise “(isim) 2021 de mutlu olursun”
+              - sayi 30’dan kucuk ise “maalesef (isim) 2021 sana yaramayacak”
+                    yazdiralim
+*/
+var isim = prompt("Isminizi soyler misiniz?");
+var sayi = getRandomInt(100); 
+console.log(sayi);
+// () parantez icindeki sart gerceklesirse {} icindeki islemi yapar
+// () parantez icindeki sart gerceklesmezse hic bir sey yapmaz
+// if blogu su parcalardan olusur
+// 1- if keyword
+// 2- () condition(sart) bolumu  true/false
+// 3- {} body bolumu
+if(sayi>80){
+  alert("yasasin "+ isim + " 2021 de cooooook mutlu olacaksin") ; 
+} else if (sayi>60){
+    alert(isim + " 2021 de mutlu olacaksin");
+} else if (sayi>30){
+    alert(isim +  " 2021 de umarim mutlu olursun");
+} else {
+    alert("maalesef " + isim+  " 2021 sana yaramayacak");
+}
+function getRandomInt(sayi) {  return Math.floor(Math.random() * (sayi));}
+
+----------------------------------------------------------------------

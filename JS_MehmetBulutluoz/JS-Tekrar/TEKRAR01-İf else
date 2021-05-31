@@ -1,0 +1,131 @@
+TEKRAR01-İf else
+
+
+// Soru 1: Kullanıcıdan alınan iki sayıyı karşılaştıran programı yazalım.
+
+var sayi1=prompt("1.Sayıyı giriniz.");
+var sayi2=prompt("2.Sayıyı giriniz.");
+
+if (sayi1>sayi2){alert(sayi1 +" sayısı  " + sayi2 +" sayısından  büyüktür.");}
+else if (sayi2>sayi1){alert(sayi2 +" sayısı" + sayi1 +" sayısından  büyüktür.");}
+else {alert ("İki sayı birbirine eşittir.");}
+-----------------------------------------------------------------------
+
+//Soru 2:Girilen sayı pozitif ise pozitif, negatif ise negatif, 0 ise 0 yazdıran programı yazalım.
+
+var sayi=prompt("Bir  sayı giriniz.");
+
+
+if (sayi>0){alert(sayi + " pozitif bir sayıdır.");}
+else if (sayi<0){alert(sayi + " negatif bir sayıdır.");}
+else {alert ("Girdiğiniz sayı 0'dır.");}
+-----------------------------------------------------------------------
+
+//Soru3:Girilen sayının tek mi çift mi olduğunu yazdıran programı yazalım.
+
+var sayi=prompt("Bir  sayı giriniz.");
+
+
+if (sayi%2==0){alert(sayi + " çift bir sayıdır.");}
+else {alert(sayi + " tek bir sayıdır.");}
+
+----------------------------------------------------------------------
+Soru 4:
+// // 0-100 arası notları 5lik sisteme çeviren programı yazalım.(
+// 0-44 --> 1   
+// 45-54 --> 2 
+// 55-69 --> 3
+// 70-84 --> 4 
+// 85-100 --> 5
+
+
+var not=prompt("100 üzerinden hesaplanan notunuzu giriniz.");
+
+
+if (not>84){alert("Notunuz 5'dir. (PEKİYİ)");}
+else if(not>69) {alert("Notunuz 4'dür.(İYİ)");}
+else if(not>54) {alert("Notunuz 3'dür.(ORTA)");}
+else if(not>44) {alert("Notunuz 2'dir.(GEÇER)");}
+else {alert("Notunuz 1'dir.(BAŞARISIZ)");}
+
+-----------------------------------------------------------------
+
+// 5 ürünün fiyatını girelim. Kullanıcının girdiği fiyata göre alabileceği ürünleri fiyatları 
+// İle listeleyen programı den yazdıralım.
+
+
+var gomlek=50;
+var pantalon=70;
+var ayakkabi=150;
+var canta=100;
+var elbise=200;
+
+var fiyat=prompt("Kaç TL altı ürünleri filtrelemek istersiniz?");
+
+if(fiyat>=gomlek){console.log("Gömlek= " + gomlek);}
+if(fiyat>=pantalon){console.log("Pantalon= " + pantalon);}
+if(fiyat>=ayakkabi){console.log("Ayakkabı= " + ayakkabi);}
+if(fiyat>=canta){console.log("Çanta= " + canta);}
+if(fiyat>=elbise){console.log("Elbise= " + elbise);}
+
+------------------------------------------------------------------
+
+// Kullanıcıdan doğum tarihini yıl olarak alalım. Bilgisayarın tarihine göre yaşını hesaplayalım. 
+// Eğer 13 yaşından küçükse sosyal medya hesabı alamazsınız yazdıralım.
+
+var dogumTarihi=prompt("Doğum tarihinizi giriniz.");
+var tarih=new Date();
+var yil=tarih.getFullYear();
+
+var yas=yil-dogumTarihi;
+
+if (yas<=13){alert("Sosyal Medya hesabı almak için yaşınız KÜÇÜK.13 yaşından büyük olmalısınız.")}
+else{alert("Sosyal Medya hesabı almak için yaşınız UYGUN.")}
+
+-----------------------------------------------------------------------
+
+//  Bilgisayarın tarihine göre Hafta İçi ise hafta içi, 
+//  hafta sonu ise hafta sonu yazdıran programı yazalım.
+
+var tarih=new Date();
+var gun=parseInt(tarih.getDay());
+
+console.log(gun);
+if(gun>=1 && gun<=5){alert("Bugün HAFTA İÇİ.Hayırlı İşler.");}
+else  {alert("Bugün HAFTA SONU. İyi Tatiller.");}
+
+----------------------------------------------------------------------
+
+// Bilgisayarın saatine göre Günaydın(05.00-11.00), İyi Günler(11.00-18.00) ,
+//  İyi Akşamlar(18.00-21.00) , Huzurlu geceler yazan program yazalım.
+
+var tarih=new Date();
+var saat=parseInt(tarih.getHours());
+
+console.log(saat);
+saat=10;
+if(saat>=5 && saat<=11){alert("GÜNAYDIN.");}
+else if(saat>11 && saat<=18){alert("İYİ GÜNLER.");}
+else if(saat>18 && saat<=21){alert("İYİ AKŞAMLAR.");}
+else {alert("HUZURLU GECELER.");}
+
+----------------------------------------------------------------------
+
+//  Bir Eğitim Programı var. Bu programın başvuru Şartları
+//  1- 20 ile 45 yaş arasında olmak;
+//  2- Üniversite Mezunu olmak 
+//  3- İngilizce Seviyesi Orta ve Üstü olması…. 
+//  Girilenlere göre Eğitime başvurabilirsin ya da  
+//  şu sebepten başvuramazsın yazan programı yazalım.
+
+var yas=prompt("Lütfen yaşınızı giriniz.");
+var mezuniyet=prompt("Eğitim Durumu :  \n 1-İlkokul \n 2-Lise \n 3-ÖnLisans \n 4-Lisans \n 5-LisansÜstü ");
+var ingilizceSeviye= prompt("İngilizce Seviyeniz : \n 1-Zayıf \n 2-Orta \n 3-İyi \n 4-Çok İyi")
+
+if(yas<20 || yas>45){console.log("Bu programa başvurmak için YAŞINIZ uygun değil.");}
+if(mezuniyet!=4 && mezuniyet!=5){console.log("Bu programa başvurmak için EĞİTİM DURUMUNUZ uygun değil.");} 
+if(ingilizceSeviye<=1) {console.log("Bu programa başvurmak için İNGİLİZCE SEVİYENİZ uygun değil.");}
+if((yas>=20 && yas<=45) &&
+   (mezuniyet==4 || mezuniyet==5 ) &&
+   (ingilizceSeviye>1)) {console.log("Bu programa başvurmak için şartlarınız UYGUN. Lütfen formu doldurunuz.")}
+----------------------------------------------------------------------

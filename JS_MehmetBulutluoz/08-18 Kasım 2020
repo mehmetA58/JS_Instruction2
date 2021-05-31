@@ -1,0 +1,371 @@
+08-18 Kasım 2020
+
+Şifre Kontrolü
+---------------------------------------
+var sifre = prompt("Şifre giriniz");
+var buyukHarf = /(?=.*[A-Z])/;
+var kucukHarf = /(?=.*[a-z])/;
+var rakam = /(?=.*[0-9])/;
+var karakter = /(?=.*[@$!%*?&])/;
+​
+uyumlulukKontrol(sifre);
+​
+function uzunlukKontrol(sifre) {
+    if (sifre.length >= 6) {
+        return true;
+    } else {
+        return false;
+    }
+}
+​
+function buyukHarfKontrol(sifre) {
+​
+    if (buyukHarf.exec(sifre) == null) {
+        return false;
+    } else {
+        return true;
+    }
+}
+​
+function kucukHarfKontrol(sifre) {
+    if (kucukHarf.exec(sifre) == null) {
+        return false;
+    } else {
+        return true;
+    }
+}
+​
+function rakamKontrol(sifre) {
+    if (rakam.exec(sifre) == null) {
+        return false;
+    } else {
+        return true;
+    }
+}
+​
+function karakterKontrol(sifre) {
+    if (karakter.exec(sifre) == null) {
+        return false;
+    } else {
+        return true;
+    }
+}
+​
+function uyumlulukKontrol(sifre) {
+    if (uzunlukKontrol(sifre)==true && buyukHarfKontrol(sifre) ==true && kucukHarfKontrol(sifre)==true && rakamKontrol(sifre)==true && karakterKontrol(sifre)==true) {
+        return alert("BAŞARILI!!! Girilen şifre gereksinimleri karşılıyor.");
+    } else {
+        var gereksinim = "Şifreniz aşağıdaki gereksinimleri karşılamıyor\n";
+        if (uzunlukKontrol(sifre)==false) {
+            gereksinim += "-Şifreniz 6 karakterden uzun olmalı\n";
+        }if(buyukHarfKontrol(sifre) ==false){
+            gereksinim += "-Şifrenizde en az 1 büyük harf bulunmalı\n";
+        }if(kucukHarfKontrol(sifre)==false){
+            gereksinim += "-Şifrenizde en az 1 küçük harf bulunmalı\n";
+        }if(rakamKontrol(sifre)==false){
+            gereksinim += "-Şifrenizde en az 1 rakam bulunmalı\n";
+        }if(karakterKontrol(sifre)==false){
+            gereksinim += "-Şifrenizde en az 1 özel karakter bulunmalı\n";
+        }
+        return alert(gereksinim);
+    }
+​
+    
+}
+-----------------------------------------------------------------------
+var sifre = prompt("En az 6 karakterli bir sifre giriniz");
+var sifreUzun = sifre.length;
+var kucukHarfCount = 0;
+var buyukHarfCount = 0;
+var rakamCount = 0;
+var ozelCount = 0;
+    if(sifreUzun>5){
+        for(var i = 0 ; i<sifreUzun ; i++){
+            if((sifre.slice(i,i+1)>="A" && sifre.slice(i,i+1)<="Z") ){
+                buyukHarfCount++;    
+            }
+            else if((sifre.slice(i,i+1)>="a" && sifre.slice(i,i+1)<="z")){
+                kucukHarfCount++;
+            }
+            else if((sifre.slice(i,i+1)>="!" && sifre.slice(i,i+1)<="/")){
+                ozelCount++;
+            }
+            else if((sifre.slice(i,i+1)>="0" && sifre.slice(i,i+1)<="9")){
+                rakamCount++;
+            }
+        }
+        if(buyukHarfCount>0 && kucukHarfCount>0 && ozelCount>0 && rakamCount>0 ){
+            alert("Sifreniz gecerli");
+        }else alert("Sifre gecerli degil, kurala gore yeniden sifre girin");       
+    }else{
+        alert("Sifre uzunlugu en az 6 karakterli olmali");
+    }
+    ------------------------------------------------------------------
+    // 6 karakterden oluşacak
+//Büyük harf , küçük harf, rakam, özel karakter.
+
+var sifre=prompt("Şifrenizi Giriniz");
+
+var sifreL=sifre.length;
+
+var buyukHarfler="ABCÇDEFGHIİJKLMNOÖPRSŞRSŞUÜVYZ";
+var kucukHarfler=buyukHarfler.toLowerCase();
+var rakamlar="0123456789";
+var ozelKar="*|,:<>[]{}`;()@&$#%!+-/";
+
+var countBuyuk=0;
+var countKucuk=0;
+var countRakam=0;
+var countOzel=0;
+
+if (sifreL>=6){
+
+     for(var i=0; i<sifreL; i++){
+
+        if(buyukHarfler.includes(sifre.substring(i,i+1))){
+            countBuyuk++;
+        } else if(kucukHarfler.includes(sifre.substring(i,i+1))){
+            countKucuk++;   
+        } else if(rakamlar.includes(sifre.substring(i,i+1))){
+            countRakam++;
+        }else if(ozelKar.includes(sifre.substring(i,i+1))){
+            countOzel++;
+        }
+     }
+
+     if(countBuyuk==0){
+         alert("Girdiğiniz şifre en az bir 'BÜYÜK HARF'içermelidir.");
+     } if(countKucuk==0){
+          alert("Girdiğiniz şifre en az bir 'küçük harf' içermelidir.");
+     } if (countRakam==0){
+          alert("Girdiğiniz şifre en az bir 'rakam' içermelidir.");
+     } if(countOzel==0){
+          alert("Girdiğiniz şifre en az bir 'özel karakter' içermelidir.");
+     } if(countBuyuk*countKucuk*countOzel*countRakam>0){alert("Şifre Oluşturuldu");}
+     
+
+
+} else {alert("Şifre en az 6 karakter olmalıdır.");}
+----------------------------------------------------------------------
+Tahmin Oyunu:
+................
+var sayi=Math.floor(Math.random()*100);
+
+var girilenSayi=150;
+var count=0;
+while(girilenSayi!=sayi){
+    girilenSayi=parseInt(prompt("Tuttuğum Sayıyı tahmin et.."));
+    if (girilenSayi<sayi){
+        alert("Daha büyük bir sayı giriniz.");
+    } else if(girilenSayi>sayi) {alert("Daha küçük bir sayı giriniz.");}
+    count++;
+} 
+
+alert(count + " sefer deneyerek" +sayi+" yı buldun aferin");
+----------------------------------------------------------------------
+
+
+WHİLE LOOP:
+-----------
+// Kullanicidan bir sayi alin ve rakamlari toplamini bulun
+var sayi=parseInt(prompt("rakamlarini toplamak icin bir sayi giriniz"));
+var rakamlarToplami=0;
+while(sayi>0){ // 12345
+ rakamlarToplami+=sayi%10;
+ sayi=Math.floor(sayi/10);
+}
+console.log("girdiginiz sayinin rakamlari toplami : " + rakamlarToplami)
+
+----------------------------------------------------------------------
+// Kullanicidan pozitif bir tamsayi sayi girmesini isteyin
+// ve o sayiya kadar olan tum dogal sayilarin toplamini bulup yazdirin
+var sayi = parseInt(prompt("bir sayi giriniz"));
+// 1.cozum
+var i=1;
+toplam =0;
+ while(i<=sayi){
+     toplam += i;
+     i++;
+ }
+console.log(toplam);
+// 2.cozum 
+ toplam=0;
+ var sayi2=sayi;
+while(sayi2>0){
+    toplam+=sayi2;
+    sayi2--;
+}
+console.log("Toplam2=" + toplam);
+// for loop ile yapalim
+toplam=0;
+for(var i=1 ; i<=sayi ; i++ ){
+    toplam+=i;
+}
+console.log("Toplam3=" + toplam);
+
+----------------------------------------------------------------------
+// kullanicidan toplamak uzere sayilar alin ve kullanici sifira basana kadar devam edin
+var girilenSayi=1;
+var sayilarinToplami=0;
+var count=0;
+while(girilenSayi!=0){
+  girilenSayi=parseInt(prompt("toplama eklemek icin bir sayi girin \n veya bitirmek icin 0'a basin"));
+  sayilarinToplami+=girilenSayi;
+  count++;
+}
+console.log(count + " defa sayi girdiniz ve girdiginiz sayilarin toplami : " + sayilarinToplami);
+
+----------------------------------------------------------------------
+// kullanicidan toplamak uzere sayilar alin toplam 500 olunca oyunu bitirin
+var girilenSayi=1;
+var sayilarinToplami=0;
+var count=0;
+while(sayilarinToplami<500){
+  girilenSayi=parseInt(prompt("toplama eklemek icin bir sayi girin \n veya bitirmek icin 0'a basin"));
+  sayilarinToplami+=girilenSayi;
+  count++;
+}
+console.log(count + " defa sayi girdiniz ve girdiginiz sayilarin toplami : " + sayilarinToplami);
+----------------------------------------------------------------------
+/*
+Soru : 100 dan kucuk rastgele bir sayi uretin
+Kullanicidan bu sayiyi bulmasini isteyin
+Kullanicinin her tahmininde urettiginiz sayi ile tahmini karsilastirip
+ “Tuttugum sayi daha buyuk ” veya
+ “Tuttugum sayi daha kucuk ” yazdirin
+Kullanici sayiyi bildiginde kac tahminde sayiyi buldugunu ekrana yazdirin
+*/
+var sayi=Math.floor(Math.random()*100);
+var tahmin=150;
+var count=0; 
+while(tahmin!=sayi){
+ 
+  tahmin=parseInt(prompt("100'den kucuk bir sayi tuttum, bil bakalim"));
+  if(tahmin>sayi){
+      console.log("kucult");
+  }else {
+      console.log("buyut");
+  }
+   count++;
+}
+console.log("aferin !! " + count + " tahminde sayiyi buldun");
+----------------------------------------------------------------------
+/*
+Soru : 100 dan kucuk rastgele bir sayi uretin
+Kullanicidan bu sayiyi bulmasini isteyin
+Kullanicinin her tahmininde urettiginiz sayi ile tahmini karsilastirip
+ “Tuttugum sayi daha buyuk ” veya
+ “Tuttugum sayi daha kucuk ” yazdirin
+Kullanici sayiyi bildiginde kac tahminde sayiyi buldugunu ekrana yazdirin
+*/
+var sayi=Math.floor(Math.random()*100);
+var tahmin=parseInt(prompt("100'den kucuk bir sayi tuttum, bil bakalim"));
+var count=1; 
+while(tahmin!=sayi){
+ 
+  
+  if(tahmin>sayi){
+      tahmin=prompt("kucult");
+  }else {
+      tahmin=prompt("buyut");
+  }
+   count++;
+}
+console.log("aferin !! " + count + " tahminde sayiyi buldun");
+----------------------------------------------------------------------
+
+ÖDEV:
+-------
+Interview soru 1: kullanicidan bir sayi alin ve girilen sayi kadar Fibonacci
+serisinden eleman yazdirin.
+-----------------------------------
+var sayi=prompt("Kaç adet fibonnacci sayısı yazdırmak istiyorsunuz?");
+var fibonacci=0;
+var temp2=1; 
+var temp1=0;
+
+console.log("1.Fibonacci Sayısı= " + temp1); //ilk 1 i yazdırmak için...(1.fibonacci sayısı 0'dır)
+console.log("2.Fibonacci Sayısı= " + temp2); //2.yi yazdırmak için...(2.fibonacci sayısı 1'dır)
+
+for (var i=3 ; i<=sayi; i++){
+    
+    fibonacci= temp1+temp2;
+    temp1=temp2;
+    temp2=fibonacci;    
+    console.log(i+".Fibonacci Sayısı= " + fibonacci);
+
+}
+---------------------------------------------------------------------
+Interview soru 2: kullanicidan bir sayi alin ve girilen sayidan kucuk olan
+Fibonacci serisi elemanlarini yazdirin. 1 1 2 3 5 8 ….
+--------------------------------------------------------
+
+var sayi=prompt("Fibonacci sayılarını hangi sayıya kadar yazdırmak istersiniz? ");
+var fibonacci=0;
+var temp1=0; 
+var temp2=1;
+
+console.log(temp1); //ilk 1 i yazdırmak için...(1.fibonacci sayısı 0'dır)
+console.log(temp2); //2.yi yazdırmak için...(2.fibonacci sayısı 1'dır)
+
+while(fibonacci<sayi){
+    
+    fibonacci= temp1+temp2;
+    temp1=temp2;
+    temp2=fibonacci;  
+    if(fibonacci>sayi){ break;}  
+    console.log(fibonacci);
+} 
+--------------------------------------------------------------------
+
+Soru : Kullanicidan bir sayi alip o sayinin asal olup olmadigini yazdirin.
+
+----------------------
+var girilenSayi=prompt("Asal sayı olup olmadığını kontrol edeceğiniz sayıyı giriniz.");
+
+if (girilenSayi!=0 && girilenSayi!=1){
+
+    sonuc=asalKontrol(girilenSayi); 
+    if(sonuc>0){alert( girilenSayi+ " asal değildir." );}
+    else {alert(girilenSayi+ " asal sayıdır.");}
+
+}else {
+   alert( girilenSayi+ " asal değildir.");
+}
+
+
+
+function asalKontrol(sayi){
+
+var count=0;
+
+for(var i=2; i<sayi; i++){
+    if(sayi%i==0){count++; } 
+} 
+
+return count;
+
+}
+
+-----------------------------------------------------------------
+Soru : Kullanicidan bir sayi alip o sayidan kucuk asal sayilari yazdirin.
+
+var sonSayi=prompt("Asal sayıları hangi sayıya kadar yazdırmamızı istersiniz?");
+
+for (var i=2; i<sonSayi;i++){
+    sonuc=asalKontrol(i);
+    if(sonuc==0){console.log(i);}
+}
+
+
+function asalKontrol(sayi){
+
+var count=0;
+
+for(var i=2; i<sayi; i++){
+    if(sayi%i==0){count++; } 
+} 
+
+return count;
+
+}

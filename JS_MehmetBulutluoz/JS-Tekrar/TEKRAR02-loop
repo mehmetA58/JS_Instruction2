@@ -1,0 +1,246 @@
+TEKRAR02-	LOOP 
+
+FOR-LOOP
+----------------------------------------------------------------------
+1-1-10 arası sayıları ekranda yazdıralım.
+--------------------------------------------------------------------
+
+for(var i=1 ; i<11; i++){
+    console.log(i);
+}
+
+----------------------------------------------------------------------
+2-For döngüsü ile  10’dan 1’e doğru geri sayıları yazdıran javascript kodlarını yazınız.
+----------------------------------------------------------------------
+
+for(var i=10 ; i>0; i--){
+    console.log(i);
+}
+
+----------------------------------------------------------------------
+3- 1-50 arası sayılardan çift olanları yazdıran programı yazalım.
+--------------------------------------------------------------------
+
+for(var i=2 ; i<=50; i++){
+    if(i%2==0){console.log(i);}
+}
+
+----------------------------------------------------------------------
+ 4- 1 ile 100 arası sayılardan 3’e ve 5’e tam bölünen sayıları yazan program yazalım.
+
+ Örnek Ekran Çıktısı:
+3 sayısı 3 e bölünür.
+5 sayısı 5 e bölünür.
+6 sayısı 3 e bölünür.
+9 sayısı 3 e bölünür.
+10 sayısı 5 e bölünür.
+-------
+gibi
+--------------------------------------------------------------------
+
+for(var i=1 ; i<=100; i++){
+    if(i%3==0){console.log(i + " sayısı 3 e bölünür." );}
+    if(i%5==0){console.log(i+ " sayısı 5 e bölünür." )}
+}
+
+----------------------------------------------------------------------
+5-	 Kullanıcının girdiği metni yine kullanıcının girdiği adet kadar ekranda yazdıran programı yazalım. (En son da kaç adet yazdırdığını da yazsın.Örn:Merhaba 5 adet yazdırıldı.)
+--------------------------------------------------------------------
+
+var kelime=prompt("Yazdırmak istediğiniz kelimeyi giriniz.")
+var sayi=prompt("Kaç defa yazdırmak istersiniz?")
+
+for(var i=1 ; i<=sayi; i++){
+    console.log(kelime );
+    
+}
+console.log(kelime + " " + sayi +" adet yazdırıldı.")
+
+---------------------------------------------------------------------
+6- Kullanicidan 3 harften uzun bir kelime ve 10’dan kucuk bir sayi alin, Kelimenin son 2 harfini girilen sayi kadar yazdirin.
+--------------------------------------------------------------------
+
+var kelime=prompt("Kelimeyi giriniz.")
+var sayi=prompt("Kaç defa yazdırmak istersiniz?");
+
+var kelimeParca=kelime.slice(-2);
+
+for(var i=1 ; i<=sayi; i++){
+    console.log(kelimeParca);
+}
+
+console.log(kelimeParca + " " + sayi +" adet yazdırıldı.");
+
+----------------------------------------------------------------------
+7-Kullanıcının girdiği sayıya kadar sayıların toplamını veren program yazalım.(Örn: Kullanıcı 5 girdi. Toplam=1+2+3+4+5)
+--------------------------------------------------------------------
+
+var sayi=parseInt(prompt("Hangi sayıya kadar?"));
+
+var toplam=0;
+
+for(var i=1 ; i<=sayi; i++){
+    
+    toplam+=i;
+}
+
+console.log("1'den " +sayi + " ya kadar olan tüm sayıların toplamı=" + toplam);
+
+----------------------------------------------------------------------
+8-Klavyeden girilen sayının Asal Sayı olup olmadığını bulan sonucu ekrana yazdıran javascript programını yapınız.
+--------------------------------------------------------------------
+
+var sayi=parseInt(prompt("Hangi sayının asal olup olmadığnı merak ediyorsun?"));
+
+var count=0;
+for(var i=2 ; i<sayi; i++){
+
+    if(sayi%i==0){
+        count++;
+    }
+    
+}
+if(count==0){ console.log(sayi+ " asal sayıdır.");}
+else { console.log(sayi+ " asal sayı değildir.");}
+
+----------------------------------------------------------------------
+
+9-For döngüsü ile kullanıcının girdiği sayının  çarpım tablosunu ekrana yazdıran javascript kodlarını yazınız. 
+Örnek Çıktı:
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+.
+.
+--------------------------------------------------------------------
+
+var sayi=parseInt(prompt("Hangi sayının çarpım tablosunu istiyorsun?"));
+
+
+var carpim;
+for(var i=1 ; i<10 ; i++){
+    carpim=sayi*i;
+    console.log(sayi+ " * " + i + " = "+carpim);
+    
+}
+
+--------------------------------------------------------------------
+10- Kullanicidan bir cumle ve bir harf alin,
+Cumlede harfin kac kere kullanildigini bulup, yazdirin.
+--------------------------------------------------------------------
+
+var cumle=prompt("Bir cümle giriniz");
+var harf=prompt("Bir harf giriniz");
+var harfToplam=0;
+
+for(i=0 ; i<cumle.length; i++){
+    if(cumle[i]==harf){
+        harfToplam++;
+    }
+} alert(harf +" cümlede " +harfToplam+" adet var.");
+
+-------------------------------------------------------------------
+11-Verilen bir kelimeyi tersine ceviren function yaziniz
+------------------------------------------------------------------
+
+var kelime=prompt("Bir kelime giriniz.");
+
+var kelimeL=kelime.length;
+var yeniKelime="";
+for(i=kelimeL; i>=0; i--){
+   yeniKelime+=kelime.substring(i-1,i);
+}
+alert(yeniKelime);
+
+
+
+WHİLE-LOOP
+--------------------------------------------------------------------
+1-Kullanıcı çift sayı girene kadar sayı isteyen programı yazalım. Eğer tek girerese tekrar dene. Çift girerse Çift sayı yazdırsın.
+--------------------------------------------------------------------
+var sayi=1;
+while(sayi%2!=0){
+    sayi=parseInt(prompt("Bir sayı gir"));
+    console.log("Tekrar dene...");
+    
+}
+alert("sonunda çift sayı girdin.");
+
+----------------------------------------------------------------------
+2-Kullanıcının girdiği sayıya kadar sayıların toplamını veren program yazalım.(Örn: Kullanıcı 5 girdi. Toplam=1+2+3+4+5) 
+----------------------------------------------------------------------
+var sayi=parseInt(prompt("Hangi sayıya kadar toplayalım?"));
+
+var toplam=0;
+
+while(sayi!=0){
+    toplam+=sayi;
+    sayi--;
+} alert("Sayılar Toplamı= " +toplam);
+
+----------------------------------------------------------------------
+3-Tahmin Oyunu
+----------------------------------------------------------------------
+
+Soru : 100 dan kucuk rastgele bir sayi uretin
+Kullanicidan bu sayiyi bulmasini isteyin
+Kullanicinin her tahmininde urettiginiz sayi ile tahmini karsilastirip
+ “Tuttugum sayi daha buyuk ” veya
+ “Tuttugum sayi daha kucuk ” yazdirin
+Kullanici sayiyi bildiginde kac tahminde sayiyi buldugunu ekrana yazdirin
+*/
+var sayi=Math.floor(Math.random()*100);
+var tahmin=parseInt(prompt("100'den kucuk bir sayi tuttum, bil bakalim"));
+var count=1; 
+while(tahmin!=sayi){
+ 
+  
+  if(tahmin>sayi){
+      tahmin=prompt("kucult");
+  }else {
+      tahmin=prompt("buyut");
+  }
+   count++;
+}
+console.log("aferin !! " + count + " tahminde sayiyi buldun");
+
+---------------------------------------------------------------------
+4- 0 girene kadar sayıları toplayan programı yazın.
+---------------------------------------------------------------------
+var toplam=0;
+var sayi=1;
+while(sayi!=0){
+        sayi=parseInt(prompt("Toplanacak sayıları gir. Giriş tamamlandığında 0 a bas."));
+        toplam+=sayi;      
+}
+console.log("Sayılar Toplamı=" +toplam );  
+
+---------------------------------------------------------------------
+5-Kullanıcıda şifre soran ve 3 hak sonunda yanlış girlince hesabı bloke eden program yazalım.
+----------------------------------------------------------------------
+var gercekSifre=12345;
+var hak=3;
+for (var i=1; i<=hak; i++){
+
+    var sifre=parseInt(prompt("Şifrenizi giriniz."));
+    if(sifre==gercekSifre){
+    alert("Şifre Doğru"); break;}
+    else { alert("Şifre Yanlış");}
+
+} if(hak==3 && sifre!=gercekSifre) {
+    alert("Hesabınız Bloke oldu.");
+}
+-----------------------------------------------------------------
+6-Kullanicidan bir sayi alin ve rakamlari toplamini bulun.
+-----------------------------------------------------------------
+var sayi=parseInt(prompt("Bir sayı gir."));
+
+var toplam=0;
+
+while(sayi>0){    
+   
+        toplam+=sayi%10;
+        sayi=Math.floor(sayi/10);     
+}
+console.log("Sayılar Toplamı=" +toplam );   

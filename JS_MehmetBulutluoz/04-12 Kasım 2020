@@ -1,0 +1,101 @@
+04-12 Kasım 2020
+
+function isimDuzenleyici (){
+var isim=prompt("Lutfen isminizi giriniz");
+var soyisim=prompt("lutfen soyisminizi giriniz");
+var isimIlkHarf=isim.slice(0,1);
+var isimSonrasi=isim.slice(1);
+isim=isimIlkHarf.toUpperCase()+isimSonrasi.toLowerCase();
+var soyisimIlkharf=soyisim.slice(0,1);
+var soyisimSonrasi=soyisim.slice(1);
+soyisim=soyisimIlkharf.toUpperCase()+soyisimSonrasi.toLowerCase();
+console.log(isim+ " " + soyisim);
+ 
+}
+isimDuzenleyici();
+
+----------------------------------------------------------------------------
+
+FahrenheitToSantigrad2 (100);
+// 2.tur fonksiyonda parantezin icine parametre(ler) yaziyoruz
+// fonksiyon tanimlanirken de parametrelere bir isim veriyoruz
+// fonksiyonun icinde tanimlanan parametreye bizim gonderdigimiz deger atanarak kullanilir
+function fahrenheitToSantigrad2 (sicFah){
+var sicSantigrad=(sicFah-32)*5/9;
+sicSantigrad=sicSantigrad.toFixed(1);
+alert("su andaki sicakli : " + sicSantigrad + " C derece");
+}
+// 1. fonksiyon cesidinde fonksiyon baslangic ve bitis arasindaki tum islemleri fonksiyonun
+// icinde yapiyor
+function fahrenheitToSantigrad(){
+var sicFah=prompt("Lutfen sicakligi fahrenheit olarak yaziniz");
+var sicSantigrad=(sicFah-32)*5/9;
+sicSantigrad=sicSantigrad.toFixed(1);
+alert("su andaki sicakli : " + sicSantigrad + " C derece");
+}
+function santigradToFahrenheit(){
+var sicSantigrad=prompt("Lutfen sicakligi Santigrad olarak yaziniz");
+var fahrenheit=((sicSantigrad*9/5)+32).toFixed(1);
+alert("Su andaki sicaklik : " + fahrenheit + " F derece")
+}
+
+------------------------------------------------------------------------------------------------
+
+// Soru 4: Bir variable olusturup kilometre olarak mesafeyi atayalim. 
+// Atadigimiz mesafeyi mil’e cevirip alert ile yazdiran bir function yazalim (1 km=0.621 mil)
+// var mesafe=60;
+// kmMileCevirme(mesafe);
+// function kmMileCevirme(mesafe){
+//     alert(mesafe + " km'nin mil olarak karsiligi : " + (mesafe*0.621).toFixed(1));
+// }
+// Soru 4: Bir variable olusturup mil olarak mesafeyi atayalim. 
+// Atadigimiz mesafeyi km’ye cevirip alert ile yazdiran bir function yazalim (1 mil=1/0.621 km)
+// miliKmCevir();
+// function miliKmCevir(uzaklik){
+//     var uzaklikKm=(uzaklik/0.621).toFixed(1);
+//     alert(uzaklik + " milin Km olarak karsiligi : " + uzaklikKm);
+// }
+// vize ve final notunu parametre olarak yazdigimizda, vize notunun %30’u ve final notunun %70’i ile 
+// ders gecme notunu hesaplayip yazdiran function yazalim.
+/*
+var vize=20;
+var final=64;
+gecmeNotu(vize,final);
+*/
+// gecmeNotu(20,64);
+// function gecmeNotu(vize,final){
+//     var gecmeNotu=vize*0.3+final*0.7;
+//     alert("Yilsonu gecme notunuz : " + gecmeNotu);
+// }
+// 3 tane yazili sinav notunu girince ortalamayi veren bir function yazin
+// ortalama(20,50,80);
+// function ortalama(yazili1,yazili2,yazili3){
+//     var ortalama=((yazili1+yazili2+yazili3)/3).toFixed(2);
+//     alert("Ortalam notunuz : " + ortalama);
+
+
+------------------------------------------------------------------------------------------------------
+
+// 3.tur fonksiyonda sonucu sadece yazdirmak yerine, 
+// program icinde  kullanilmak uzere bir deger geri dondurebiliriz
+// var yilSortalamasi = ortalama(20,50,80);
+// console.log(yilSortalamasi);
+// function ortalama(sinav1,sinav2,sinav3){
+//     var ortalama=(sinav1+sinav2+sinav3)/3;
+//     return ortalama;
+// }
+// agirligi ve boyu girilen kisinin BMI'ini hesaplayan bir fonksiyon yaziniz
+// sonra hesaplanan bmi'a gore sahsin kilo durumunu yazdirin
+// bmi<20 zayif
+// 20<= bmi<25 normal .....
+var bmi=bmiHesapla(80,180);
+kiloDurumunuGoster(bmi);
+function bmiHesapla(kilo,boy){
+    
+    var bmi=(10000*kilo/(boy*boy)).toFixed(1);
+   
+   return bmi;
+}
+
+------------------------------------------------------------------------------------
+

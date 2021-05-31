@@ -1,0 +1,92 @@
+03-11 Kasım 2020
+//Soru 1: Prompt ile kullanicidan  fahrenheit olarak dereceyi alip santigrad’a cevirelim
+// var sicFah=prompt("Lutfen sicakligi fahrenheit olarak yaziniz");
+// var sicSantigrad=(sicFah-32)*5/9;
+// sicSantigrad=sicSantigrad.toFixed(1);
+// alert("su andaki sicakli : " + sicSantigrad + " C derece");
+// Soru 2: Prompt ile kullanicidan  santigrad olarak dereceyi alip fahrenheit’a cevirelim
+// var sicSantigrad=prompt("Lutfen sicakligi Santigrad olarak yaziniz");
+// var fahrenheit=((sicSantigrad*9/5)+32).toFixed(1);
+// alert("Su andaki sicaklik : " + fahrenheit + " F derece")
+//Soru 3: Prompt ile kullanicidan  boy ve kilosunu alip BMI hesaplayalim
+//BMI = kilo / (boy * boy)  kilogram/metre
+var boy = prompt("Lutfen boyunuzu cm olarak giriniz");
+var kilo= prompt ("Lutfen kilonuzu kg olarak giriniz");
+boy=boy/100;
+var bmi=(kilo/(boy*boy)).toFixed(1);
+alert("Vucut kutle endeksiniz : " + bmi);
+
+
+------------------------------------------------------------------------------------------------------
+- ogrendikleriniz uzerine piyasada kullanilan bootstrap gibi toollari ogrenin
+- butun frameworkler JS uzerine insa edilmis, JS mutlaka bilmelisiniz
+- piyasada en cok istenilen profil JS ve bootstrap bilmelisiniz
+- JS, JQUERY, ANGULAR, VUE frameworkleri ogrenirseniz cok faydasini gorursunuz
+- Kendi uygulamalarinizi gelistirirken 
+- ogrenmeye yogunlasmaniz lazim, pes etmeden azimle calismalisiniz.
+- IT sektorunde azimli olmayanlar bir yerlerde takilip kaliyor
+- ogrenirken ara vermeyin, ara verirseniz sifirdan baslamak zorunda kaliyorsunuz
+- konsepti ogrenirseniz detaylari arastirip hatirlayabilirsiniz, takildiginiz yerde nereye gideceginizi bilirsiniz
+- bu kurs suresince diger islerinizi ayarlamaya calisin ve kursa yogunlasin
+soru : sdlc dersleri ise girerken lazim oluyor mu ?
+takim calismasinda nasilsiniz ? takim uyeleri ile iliskileriniz nasildir ? 
+developer olarak PO ile iliskileriniz nasildir ? Gunluk neler yapiyorsunuz ?
+scrum'in parcalari nedir? sprint nedir? refinement,demo,stundup toplantilari nasil yapiyorsunuz ? story'leri nasil olusturuyorsunuz ? product backlog ve sprint backlog planlamaya uygun olarak nasil aliyorsunuz ? 
+point leri nasil verirsiniz ? agile planlamasi cok onemli
+soru : mulakatta ne tur sorular soruluyor ?
+soru : turkiyede hangi universitede okudunuz?
+selcuk, bilgisayar mezunuyum
+soru : IT sektorunde yillik salary yaklasik ne kadar ?
+ulkelere gore degisiyor,gittikce artan bir talep var, ozellile de developer lara
+yillik 70.000 gibi baslaniyor, 2-3 yil tecrube ile 100.000'e cikiyor, sonra 200.000 e kadar cikiyor. gorusmelerinizle rakami degistirebilirsiniz
+soru : bu alanda kendinizi gelistirmek icin nasil bir calisma duzeniniz vardi? calısırken nelere dıkkat etmemız gerekıyor?
+kursdaki derslere iyi calisinca ise giris icin yeterli oluyor, ama 5-6 ay cok iyi calismaniz gerekiyor, bunun cok ornegini gordum 
+analitik bir yaklasimla kendi eksiklerinizi gorup o bosluklari doldurmalisiniz
+kendi yeteneklerinizi gelistirmelisiniz
+soru : IT sektöründe yaşın önemi var mı mesela 20 yaşındaki bir web developerı mı tercih ediyor şirketler yoksa atıyorum 40 yaşındaki web developeri mi?
+2 yil once matematik ogrenmenligi yapan bir arkadasim su an cok iyi bir iste calisiyor
+cok dagilmayin, alaninizi belirleyip onlara yogunlasin
+soru : baslangicta kendini bilgi ve tecrübe bakiminda eksik hissetme duygusu nasil asilabilir? Kendisi ilk basladiginda bu duyguyu yasadi mi?
+bu duyguyu yasiyorsunuz. su andaki takimimda 3 kisi yeni baslamis, bilgisayar muh. okumuslar ama teknik bilgileri var ama pratik bilgisi cok yok, herkeste bir cekingenlik oluyor ama biraz isin icine girince ozguvenleri artiyor. Ilk user story i bitirince oz guven geliyor. Bu endise sizi motive edebilir, ogrenme arzusu ve istek olmali
+istekli degilseniz, bir yere kadar gider sonra takilirsiniz ama istekli iseniz mutlaka basarirsiniz. Ben calismak isteyip de basaramayan gormedim
+soru : PHP ve frameworklerinin sektördeki yeri hakkında ne düşünüyorsunuz ?
+PHP hala var ama artik cok populer degil, PHP yerine yukarida bahsettigimiz dillere yogunlasmaniz daha iyi
+soru : Aranan profile ulaşmak için ne kadar çalışılmalı? ay yıl ....?
+sifirdan basliyorsaniz 6-7 ay da tamamlayabilirsiniz. burada bir kural yok size bagli, siz 1-2 saat calisirsaniz gecen sure ile 4 saat calistiginizdaki sure bir olmaz.
+soru : bize çalışmalarımızda kaynak olarak gösterebileceğiniz website,book vb. varmı ?
+internette istediginiz kadar kaynak bulabilirsiniz, biraz para vererek udemy gibi bir cok kurs var, ucretsiz bir cok kitap var
+herseyi bilmek zorunda degilsiniz ama bir sey lazim oldugunda nerede arayacaginiz ve nasil arayacaginizi bilmek onemli
+soru : Freelance olarak hiç çalıştınız mi
+hic calismadim
+soru : çok tecrübemiz yokken hommeoffice iş imkanları nasıl şirketler tercih ediyor mu ?
+pandemi surecince cok firma home office gecti, takim olarak calisiyorsaniz is yeri daha iyi. bu kisisel bir tercih. evde olunca iletisim icin cok zaman kaybi oluyor.
+soru : Full Stack Web Development dan sonra öğrenmemizi tavsiye ettiğiniz bir bölüm var mı (web security, vs.), yoksa öğrendiklerimizi geliştirmek bize tamamen yeter mi?
+uzun sureli amaclariniza bagli, fullstack olduktan sonra proje yonetimi alanlarina girebilirsiniz, scrum master , business analyst olabilir.
+genelde developerlar busines analyst olmuyorlar, daha cok teknik alanlarda gelistirmek istiyorlar
+soru : java icin corejava yeterli midir webdeveloper  icin
+java developer olmak isterseniz core java yetmeyebilir, ama webdeveloper olarak bu alandaki frame workleri ogrenebilirsiniz. react ve angular ogrenin
+soru : Mülakatla beraber işe alırken task da verilebiliyor sanırm. bunlar nasıl tasklar oluyor?
+teknik interview larda  belli yapilari kullaniyorsunuz, internette hackerrank.com gibi sitelere onceden uye olup interview da cikan sorulara bakabilirsiniz
+soru : y.dışında çalışmak için ne kadar dil gerekiyor
+amerikada en iyi pozisyonu gocmenler aliyor, amerikalilar IT sektorunde %50 yi ancak karsiliyabiliyorlar. Dil ilk sirada degil teknik kabiliyetleriniz cok onemli
+dil bilmezseniz project manager olamazsiniz ama takimda calisirsiniz
+en azindan calistiginiz projeyi anlamaniz lazim. mesela cinlilerin ing cok iyi degil ama iyi isler aliyorlar
+soru : microsoft ta veya google gibi popüler şirketlerde işe girmek zor mu veya nasıl girilebilir??
+zor degil, teknik konuda kendinizi gelistirmeniz, interview e iyi hazirlanmaniz lazim. internette bu konuda cok kaynak var
+soru : Sektörde yeni kalmak için neler yapıyorsunuz? Yapmayan geri de mi kalır?
+surekli sertifika almaya calisabilirsiniz, bu sizi yeni teknolojileri ogrenmeye zorlar
+surekli arastirma yapin
+soru : flipgrid le calismak konsunda ne dersiniz ?
+soru : kurs suresince takim calismasinin faydalari nedir ?
+takim calismasi onemli, eksiklerinizi ve farkli bakis acilarini goruyorsunuz, 
+cekinmeye gerek yok, oldugunuz yolda sabirla calisin
+mutlaka meyvesini goreceksiniz
+devamlilik ve sabir onemli
+
+
+
+
+
+
+
+

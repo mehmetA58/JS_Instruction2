@@ -1,0 +1,153 @@
+11-21 Kasım 2020
+
+/*
+var array=[3,0,5,21,3,32,34,0,21,45,56,57,0,76,3,21,87,3,95,21];
+var sayi=parseInt(prompt("Silinmesini istediginiz sayiyi giriniz"));
+/*
+1-Önce 21 nerede bulalim
+2-Ilk 21'i silelim
+3-Baska 21 var mi bakalim
+4-Eger varsa silelim
+*/
+/*
+var array=[3,0,5,21,3,32,34,0,21,45,56,57,0,76,3,21,87,3,95,21];
+var sayi=parseInt(prompt("Silinmesini istediginiz sayiyi giriniz"));
+for (var i=0 ; i<array.length ; i++){
+    if(array[i]==sayi){
+      array.splice(i,1);
+    }
+}
+console.log(array);
+*/
+// var array=[3,0,5,3,32,34,0,45,56,57,0,76,3,87,3,95]; //21
+var array=[3,0,5,21,3,32,34,0,21,45,56,57,0,76,3,21,87,3,95,21]; //21
+var sayi=parseInt(prompt("Silinmesini istediginiz sayiyi giriniz"));
+while (array.includes(sayi)) {  // array'de silinmesi istenen sayi var mi ?
+    var index=array.indexOf(sayi); // silinecek sayinin indexini bul 16
+    
+    array.splice(index,1); // bulunan indexden baslayip 1 elemani siler
+}
+console.log(array);
+
+
+-----------------------------------------------------------------------
+
+/*
+var array=[3,0,5,21,3,32,34,0,21,45,56,57,0,76,3,21,87,3,95,21];
+var sayi=parseInt(prompt("Silinmesini istediginiz sayiyi giriniz"));
+/*
+1-Önce 21 nerede bulalim
+2-Ilk 21'i silelim
+3-Baska 21 var mi bakalim
+4-Eger varsa silelim
+*/
+/*
+var array=[3,0,5,21,3,32,34,0,21,45,56,57,0,76,3,21,87,3,95,21];
+var sayi=parseInt(prompt("Silinmesini istediginiz sayiyi giriniz"));
+for (var i=0 ; i<array.length ; i++){
+    if(array[i]==sayi){
+      array.splice(i,1);
+    }
+}
+console.log(array);
+*/
+// var array=[3,0,5,3,32,34,0,45,56,57,0,76,3,87,3,95]; //21
+var array=[3,0,5,21,3,32,34,0,21,45,56,57,0,76,3,21,87,3,95,21]; //21
+elemanSil();
+elemanSil();
+elemanSil();
+console.log(array);
+function elemanSil(){
+    var sayi=parseInt(prompt("Silinmesini istediginiz sayiyi giriniz"));
+    while (array.includes(sayi)) {  // array'de silinmesi istenen sayi var mi ?
+    var index=array.indexOf(sayi); // silinecek sayinin indexini bul 16
+    
+    array.splice(index,1); // bulunan indexden baslayip 1 elemani siler
+}
+}
+-----------------------------------------------------------------------
+
+//listem.sort(); Listem array’indeki elemanlari siralar
+var array=["ali" , "veli","hasan","Ayse","Hatice"];
+console.log(array.sort());
+//var sayilar=[10,1,12,113,111,1011,10];
+var sayilar=[2,3,5,8,9];
+console.log(sayilar.sort());
+// listem.concat(yeniListe); listem array’ine yeniListe array’ini ekler
+console.log(array.concat(sayilar));
+var yeniArray=array.concat(sayilar);
+console.log(yeniArray.sort());
+// Array.isArray(listem); true dondurur
+var a=10;
+console.log(typeof(a));
+var b="Mehmet";
+console.log(typeof(b));
+console.log(typeof(array));
+Array.isArray(sayilar); // true
+// listem.toString(); array’in elemanlarini bir string’e dondurur
+var yepYeni=sayilar.toString();
+console.log(yepYeni);
+console.log(typeof(yepYeni)); // 2,3,5,8,9
+
+----------------------------------------------------------------------
+/*
+Soru : verilen arraydeki isimlerden icinde ‘a’ harfi bulunanlari silen bir program yaziniz
+INPUT  : list1=["Ali,Veli,Ayse,Fatma,Omer]
+OUTPUT : [Veli,Omer]
+*/
+var list1=["Ali","Veli","Ayse", "selim","Fatma","Omer"]; // array[i].includes("a")
+for(var i=0 ; i<list1.length ; i++){
+    var isim=list1[i];
+    isim=isim.toLowerCase();
+    if(isim.includes("a")){
+        list1.splice(i,1);
+    }
+}
+console.log(list1);
+
+----------------------------------------------------------------------
+var sayi=20; // global scope'a sahiptir ve her yerden ulasilabilir
+console.log("fonksiyon cagirmadan once sayi " + sayi); // 20
+fonkSayi=50;
+console.log("fonksiyon cagirmadan once fonkSayi " + fonkSayi);
+deneme();
+console.log("fonksiyon cagirdiktan sonra fonkSayi " + fonkSayi); //50
+console.log("fonksiyon cagirdiktan sonra sayi " + sayi); // 25
+function deneme(){
+    var fonkSayi=40;
+    console.log("fonksiyon icinde fonkSayi " + fonkSayi);
+    sayi=25;
+    console.log("fonksiyonun icinde sayi " + sayi); //25
+}
+
+---------------------------------------------------------------------
+
+/*
+    Herhangi bir fonksiyonda daha once olusturulmus isimlerle variable olusturulabilir ve   
+    bu durumda olusturulan degisken Local scope’a sahip olur
+    Bu variable fonksiyon calismaya basladiginda olusturulur ve fonksiyon bittiginde silinir.
+*/
+var isim="mehmet";
+console.log("fonksiyonlar cagrilmadan isim " + isim);
+deneme();
+deneme2();
+console.log("fonksiyonlar cagirildiktan sonra isim " + isim);
+function deneme(){
+    var isim="Hasan";
+    console.log("deneme isim " + isim);
+}
+function deneme2(){
+    console.log("deneme2 isim " + isim);
+}
+
+--------------------------------------------------------------------
+
+/*
+let & var  - blok icinde let ile degistirdigimiz blok icinde kalir
+*/
+let x = 31; 
+ if (x==31) {
+    let x = 71;  // gleiche Variable!
+    console.log(x);  // 71
+  }
+console.log(x);  // 71

@@ -1,0 +1,120 @@
+10-20 Kasım 2020
+
+ARRAYLAR:
+-----------------------------------------------------------------------
+var sayilar=[2,3,4];
+sayilar[1]=5; // indexi 1 olan elemani 5'e esitler
+sayilar[3]=7;
+sayilar[6]=9;
+sayilar[5]=23;
+sayilar[4]=12;
+// array'in sonuna yeni bir eleman olarak 11 'i ekleyelim
+sayilar[sayilar.length]=11;
+sayilar.push(13); // array'in sonuna eleman ekler
+//console.log(sayilar.push(13)); // array'in sonuna 13 ekler ve array'in yeni uzunlugunu dondurur
+console.log(sayilar.pop());
+sayilar.pop();
+sayilar.pop();
+sayilar.pop();
+sayilar.pop();
+console.log(sayilar);
+
+-----------------------------------------------------------------------
+/*
+Soru : Yemegi kim odeyecek ?
+kullanicidan isimler alarak yemekteki kisilerin isimlerinden olusan bir array olusturun. 
+(kullanici 0’a basana kadar tekrar tekrar isim sorsun)
+rastgele bir sayi uretip arrayden o indexdeki kisinin yemegi odeyecegini yazdirin
+*/
+var isimler=[];
+var isim="ali";
+while(isim != 0){
+    isim=prompt("Lutfen yemekteki isimleri tek tek yaziniz. \nbitirmek icin 0'a basiniz");
+    isimler.push(isim);
+}
+isimler.pop(); // su anda elimde isimlerden olusan bir array var
+var kimOdesinIndex=Math.floor(Math.random()*isimler.length);
+alert("Yemegi " + isimler[kimOdesinIndex] + " odesin.");
+-------------------------------------------------------------
+Benim Çözümüm:
+--------------------
+var isimler=[];
+var isim="ali";
+while (isim != 0){
+  isim =prompt("Yemekte kim var? (Hepsini yazdıktan sonra bitirmek için 0 a basınız.)");
+  isimler.push(isim);
+}
+isimler.pop();
+
+var kim= Math.floor(Math.random() * isimler.length);
+alert("Hesabı " + isimler[kim] + " ödeyecek.");
+---------------------------------------
+// isimler.shift(); Listenin ilk elemanini siler. Size sildigi elemani dondurur.
+var isimler=["Ali","Veli","Tahir"];
+console.log(isimler.shift()); // Ali
+//isimler.unshift("Mehmet"); Listenin basina Hasan ismini ekler. Size liste uzunlugunu dondurur
+console.log(isimler.unshift("Mehmet")); // 3
+console.log(isimler); // tum arrayi yazdiracak
+----------------------------------------------
+
+// isimler.slice(1,3); isimler array’inde 1.index’den 3. index’e kadar olan elemanlari verir
+var isimler=["Ali","Veli","Tahir","Sezai"];
+console.log(isimler.slice(1,3)); // veli,tahir
+console.log(isimler.slice(1)); // veli,tahir,sezai
+console.log(isimler);
+// isimler.splice(2,1); array’den 2.index’den baslayarak 1 elemani siler 
+// parantezin icindeki iki sayidan ilki kacinci indexten baslayacagi, 
+// ikinci sayi ise kac eleman silecegini belirtir
+console.log(isimler.splice(2,1)); // Tahir
+console.log(isimler); // Ali,Veli,Sezai
+// listem.includes(“Ali”); isimler’de Ali’nin olup olmadigini kontrol eder,true veya false doner
+console.log(isimler.includes("Ali")); // true
+console.log(isimler.includes("Tahir")); // false
+-------------------------------------------------------------------
+// Soru : Kullanicidan 100 den kucuk bir tamsayi isteyip, bu sayinin daha onceden tanimlanmis array’de olup olmadigini kullaniciya donen bir method yaziniz
+// Array=[3,5,21,32,34,45,56,57,76,87,95]
+var sayilar=[3,5,21,32,34,45,56,57,76,87,95];
+var sayi=parseInt(prompt("100'den kucuk bir sayi giriniz"));
+if(sayilar.includes(sayi)){
+    alert("Girdiginiz sayi array'de var");
+} else {
+    
+    alert("Girdiginiz sayi array'de yok");
+}
+-------------------------------------------------------------------
+// Soru :  verilen iki listedeki ortak isimleri yazdirin
+var list1=["Ali","Veli","Ayse","Fatma","Omer"];
+var list2=["Ali","Kemal","Hatice","Fatma","Omer","Yusuf"];
+for(var i=0; i<list1.length ; i++){
+    
+    for(var j=0 ; j<list2.length ; j++){
+         if(list1[i]==list2[j]){
+             console.log(list1[i]);
+             
+         }
+    }
+   
+}
+---------------------------------------------------------------------
+ÖDEV: 
+//Soru : Kullanicidan 100 den kucuk bir tamsayi isteyip,
+// bu sayinin daha onceden tanimlanmis array’de varsa silen prog.
+
+
+var sayilar=[3,5,21,32,34,45,56,57,76,87,95,21];
+var sayi=parseInt(prompt("Bir sayı giriniz"));
+var count=0;
+
+for(var i=0; i<sayilar.length; i++){
+    if(sayilar[i]==sayi){
+        count++; 
+        sayilar.splice(sayilar.indexOf(sayi),1);
+    }
+}
+
+if(count>0){alert("Geçerli İndirim Kodu");}
+else {alert( "İndirim Kodu GEÇERSİZ...");}
+   
+console.log(sayilar);
+
+--------------------------------------------------------------------

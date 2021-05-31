@@ -1,0 +1,43 @@
+06 Kasım 2020
+
+//var isim="Mehmet";
+//alert(isim);
+//var tumIsim="isim ve soyisim : " + isim + " Bulutluoz";
+//console.log(tumIsim);
+//var a=15;
+//var b=25;
+//console.log("iki sayinin toplami : " + (a+b));
+//b=50;
+//console.log("iki sayinin yeni toplami : " + (a+b));
+//b=" Mehmet";
+//console.log("iki degiskenin  ucuncu toplami : " + (a+b))
+//b=true;
+//console.log("iki degiskenin  dorduncu toplami : " + (a+b))
+var c;  // a isminde bir degisken olusturur ama data tipi belli degildir
+console.log(typeof(c)); // undefined
+c=50;
+console.log(typeof(c)); // number
+c="Mehmet";
+console.log(typeof(c)); // string
+c=false;
+console.log(typeof(c)); // boolean
+Collapse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

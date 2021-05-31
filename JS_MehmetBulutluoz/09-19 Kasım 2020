@@ -1,0 +1,299 @@
+09-19 Kasım 2020
+
+// kullanicidan bir sayi alin ve girilen sayi kadar Fibonacci serisinden eleman yazdirin.
+// 1 1 
+var giris=parseInt(prompt("kac tane fibonacci sayisi yazmami istersiniz ?"));
+var fib1=1;
+var fib2=1;
+if(giris<0){
+  console.log("lutfen pozitif bir sayi giriniz");
+} else if (giris==1){
+  console.log("1. Fibonacci sayisi : " + fib1);
+} else if (giris==2){
+  console.log("1. Fibonacci sayisi : " + fib1);
+  console.log("2. Fibonacci sayisi : " + fib2);
+} else {
+  fibElemanlariYazdir(giris);
+}
+// 1 1 2 3 5
+function fibElemanlariYazdir(giris){
+  var fibYeni=0;
+  console.log("1. Fibonacci sayisi : " + fib1);
+  console.log("2. Fibonacci sayisi : " + fib2);
+  for(var i=3 ; i<=giris ;i++){
+    fibYeni=fib1+fib2;
+    console.log(i+". Fibonacci sayisi : " + fibYeni);
+    fib1=fib2; //3
+    fib2=fibYeni; //5
+  }
+}
+---------------------------------------------------------------------
+//kullanicidan bir sayi alin ve girilen sayidan kucuk olan Fibonacci serisi elemanlarini yazdirin. 1 1 2 3 5 8 ….
+var giris=parseInt(prompt("hangi sayiya kadar fibonacci sayisi yazmami istersiniz ?"));
+var fib1=1;
+var fib2=1;
+if(giris<0){
+  console.log("lutfen pozitif bir sayi giriniz");
+} else if (giris==1){
+  console.log("1. Fibonacci sayisi : " + fib1);
+} else {
+  fibElemanlariYazdir(giris);
+}
+function fibElemanlariYazdir(giris){
+  console.log("1. Fibonacci sayisi : " + fib1); //1
+  console.log("2. Fibonacci sayisi : " + fib2); // 1
+   var fibYeni=fib1+fib2; // 2
+   var count=3; // 1. ve 2. sayiyi 20-21.satirda yazdirdim
+  while (fibYeni<=giris){
+    console.log(count+". Fibonacci sayisi : " + fibYeni);
+    fib1=fib2; // 3
+    fib2=fibYeni; // 5
+    count++;
+    fibYeni=fib1+fib2; //8
+  }
+}
+--------------------------------------------------------------------
+// Soru : Kullanicidan bir sayi alip o sayinin asal olup olmadigini yazdirin
+var giris=parseInt(prompt("Asal olup olmadigini kontrol icin bir tamsayi yaziniz ?"));
+asalMi(giris);
+function asalMi(giris){
+ var flag=0;
+ for(var i=2;i<giris;i++){
+   if(giris%i==0){
+    flag++;
+   }
+ }
+ if(flag==0){
+   console.log(giris + " asal sayidir")
+ } else {
+   console.log(giris + " asal sayi degil")
+ }
+}
+---------------------------------------------------------------------
+// Soru : Kullanicidan bir sayi alip o sayidan kucuk asal sayilari yazdirin
+var giris=parseInt(prompt("Hangi sayiya kadar asal sayilari yazdirmami istersiniz ?")); //100
+for(var i=2 ; i<=giris ; i++){
+  asalMi(i);
+}
+function asalMi(giris){
+ var flag=0;
+ for(var i=2;i<giris;i++){
+   if(giris%i==0){
+     flag++;
+   }
+ }
+ if(flag==0){
+   console.log(giris + " asal sayidir")
+ } 
+}
+-------------------------------------------------------------------
+// Soru : Kullanicidan bir sayi alip o sayidan kucuk asal sayilari yazdirin
+var s4 = parseInt(prompt("Integer bir sayi giriniz"));
+var count4 = 0;
+for(var i=2 ; i<s4 ; i++){
+     count4=0;
+    for(var j=2 ; j<i ; j++){
+        if(i % j == 0){
+            count4++;
+        }
+    }
+    if(count4 == 0) {console.log(i);}
+   
+     
+}
+---------------------------------------------------------------------
+SWİTCH- CASE:
+-------------
+// Soru : Cagirdigimizda bize haftanin hangi gununde oldugumuzu verecek bir fonksiyon yazalim.
+console.log(gunIsmi());
+function gunIsmi(){
+    var gun = new Date().getDay();
+var gunIsmi;
+switch(gun){
+    case 1:
+      gunIsmi="Pazartesi";
+      break;
+    case 2:
+      gunIsmi="Sali";
+      break;
+    case 3:
+      gunIsmi="Carsamba";
+      break;
+    case 4:
+      gunIsmi="Persembe";
+      break;
+    case 5:
+      gunIsmi="Cuma";
+      break;
+    case 6:
+      gunIsmi="Cumartesi";
+      break;
+    case 7:
+      gunIsmi="Pazar";
+      break;
+    default:
+      console.log("Gecerli gun numarasi degil");
+ 
+}
+  return gunIsmi;
+}
+----------------------------------------------------------------
+// Soru : Cagirdigimizda bize hafta ici mi yoksa hafta sonunda mi oldugumuzu verecek 
+// bir fonksiyon yazalim.
+haftaIci();
+function haftaIci(){
+       var gün = new Date().getDay();
+switch(gün){
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5: alert("Haftaici");
+    break;
+   
+    case 6:
+    case 0: alert("Haftasonu");
+    break;
+   
+    default:
+      console.log("Gecerli gun numarasi degil");
+ 
+}
+}
+---------------------------------------------------------------------
+//Soru : sayi olarak girdigimiz ay degerini yazi ile yazdiran bir function yazalim
+var sayi=parseInt(prompt("Lütfen ismini görmek istediğiniz ayın sayısını giriniz"));
+var ayIsmi;
+ayIsmiBul(sayi);
+function ayIsmiBul(ay){
+switch(ay) {
+        case 1:
+           ayIsmi="Ocak";
+           break;
+        case 2:
+           ayIsmi="Şubat";
+           break;
+        case 3:
+          ayIsmi="Mart";
+           break;
+        case 4:
+          ayIsmi="Nisan";
+           break;
+        case 5:
+          ayIsmi="Mayıs" ;
+           break;
+        case 6:
+          ayIsmi="Haziran" ;
+           break;
+            case 7:
+          ayIsmi="Temmuz" ;
+           break; 
+           case 8:
+          ayIsmi="Ağustos" ;
+           break; 
+           case 9:
+          ayIsmi="Eylül" ;
+           break; 
+           case 10:
+          ayIsmi="Ekim" ;
+           break; 
+            case 11:
+          ayIsmi="Kasım" ;
+           break;
+        case 12:
+           ayIsmi="Aralık" ;
+           break;
+      
+        default:
+           ayIsmi= "Geçerli ay numarası değil";
+}
+  alert(ayIsmi);
+ }
+
+-------------------------------------------------------------------
+ 
+-------------------------------------------------------------------
+
+Benim Çözümüm:
+
+Girilen bir sayının rakamlarını yazı ile yazdıran program:
+----------------------------------------------------------
+var sayi=prompt("Bir Sayı girin.");
+var sonuc;
+for(var i=0 ; i<sayi.length ; i++){
+
+  sonuc=parseInt(sayi.slice(i,i+1));
+    rakamYaz(sonuc);
+}
+
+
+function rakamYaz(rakam){
+var rakamIsmi;
+    switch(rakam){
+        case 1:rakamIsmi="Bir";break;
+        case 2:rakamIsmi="İki";break;
+        case 3:rakamIsmi="Üç";break;
+        case 4:rakamIsmi="Dört";break;
+        case 5:rakamIsmi="Beş";break;
+        case 6:rakamIsmi="Altı";break;
+        case 7:rakamIsmi="Yedi";break;
+        case 8:rakamIsmi="Sekiz";break;
+        case 9:rakamIsmi="Dokuz";break;
+        case 0:rakamIsmi="Sıfır";break
+    } console.log(rakamIsmi);
+}
+--------------------------------------------------------------------
+ÖDEV:
+Girilen 3 basamaklı sayıyı yazı ile yazdıran bir program yazın.
+------------------------------------------------------------------
+
+var sayi=prompt("3 basamaklı bir sayı girin.");
+var birler;
+var onlar;
+var yuzler;
+
+yuzler=parseInt(sayi[0]);
+onlar=parseInt(sayi[1]);
+birler=parseInt(sayi[2]);
+
+
+if (rakamYaz(yuzler)=="bir"){
+    yuzler="";
+} else {yuzler=rakamYaz(yuzler);}
+
+console.log(yuzler+"yüz"+onlarYaz(onlar)+rakamYaz(birler));
+
+
+
+function rakamYaz(rakam){
+var rakamIsmi;
+    switch(rakam){
+        case 1:rakamIsmi="bir";break;
+        case 2:rakamIsmi="iki";break;
+        case 3:rakamIsmi="üç";break;
+        case 4:rakamIsmi="dört";break;
+        case 5:rakamIsmi="beş";break;
+        case 6:rakamIsmi="altı";break;
+        case 7:rakamIsmi="yedi";break;
+        case 8:rakamIsmi="sekiz";break;
+        case 9:rakamIsmi="dokuz";break;
+        case 0:rakamIsmi="";break
+    } return rakamIsmi;
+}
+
+function onlarYaz(rakam){
+var rakamIsmi;
+    switch(rakam){
+        case 1:rakamIsmi="on";break;
+        case 2:rakamIsmi="yirmi";break;
+        case 3:rakamIsmi="otuz";break;
+        case 4:rakamIsmi="kırk";break;
+        case 5:rakamIsmi="elli";break;
+        case 6:rakamIsmi="altmış";break;
+        case 7:rakamIsmi="Yetmiş";break;
+        case 8:rakamIsmi="Seksen";break;
+        case 9:rakamIsmi="Doksan";break;
+        case 0:rakamIsmi="";break
+    } return rakamIsmi;
+}
+
