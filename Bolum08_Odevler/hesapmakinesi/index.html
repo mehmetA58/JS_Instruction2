@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootsdivap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootsdivap@5.1.1/dist/css/bootsdivap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <style>
+       .frm{
+         background-color:azure;
+         width: 300px;
+         height: 500px;
+       }
+    
+    .frm .sayi{
+      font-size: 40px;
+       border-radius:5;
+       color:white;
+        margin: 2px;
+      background-color: blue;
+      width: 60px;
+      height: 60px;
+
+      
+    }
+   .frm .islem{ 
+      font-size: 40px;
+      border-radius:5;
+      margin: 2px;
+      color:white;
+      background-color:red;
+       width: 60px;
+      height: 60px;
+    }
+    .frm #esittir{
+      font-size: 40px;
+      border-radius:5;
+      margin: 2px;
+      color:white;
+      background-color:red;
+       width: 265px;
+      height: 60px;
+    }
+    
+        
+    .ekran{
+      width: 255px;
+      height: 40px;
+      background-color:silver; 
+      border-radius:5;
+     margin: 2px;
+    }
+    
+    </style>
+   
+ </head>
+  <body>
+  
+      
+      <b> <h2><span style="display: flexbox; color:blue;" > HESAP MAKiNESi</span></h2></b> </br>
+      <form class="frm" name="hesapmakinesi">
+      
+       
+          <div > <input class="ekran" type="text" name="ekran" ></div>
+          <div>
+            <button type="button" class="sayi btn-primary" id="bir">1</button>
+            <button type="button" class="sayi btn-primary" id="iki">2</button>
+            <button type="button" class="sayi btn-primary" id="uc">3</button>
+            <button type="button" class="islem btn-primary" id="arti">+</button>
+          </div>
+              
+          <div>
+            <button type="button" class="sayi btn-primary" id="dort">4</button>
+            <button type="button" class="sayi btn-primary" id="bes">5</button>
+            <button type="button" class="sayi btn-primary" id="alti">6</button>
+            <button type="button" class="islem btn-primary" id="eksi">-</button>
+          </div>
+          <div>
+            <button type="button" class="sayi btn-primary" id="yedi">7</button>
+            <button type="button" class="sayi btn-primary" id="sekiz">8</button>
+            <button type="button" class="sayi btn-primary" id="dokuz">9</button>
+            <button type="button" class="islem btn-primary" id="carpi">*</button>
+          </div>
+          <div>
+            <button type="button" class="islem btn-primary" id="ce">C</button>
+            <button type="button" class="sayi btn-primary" id="sifir">0</button>
+            <button type="button" class="islem btn-primary" id="nokta">.</button>
+            <button type="button" class="islem btn-primary" id="bolu">/</button>
+          </div>
+          <div> <button type="button" class="islem btn-primary" id="esittir">=</button></div>
+     
+    </form>
+    <script src="hesapla.js"></script>
+  </body>
+</html>
